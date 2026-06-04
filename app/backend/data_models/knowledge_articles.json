@@ -1,0 +1,60 @@
+{
+    "title": "knowledge_articles",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "slug": {
+            "type": "string",
+            "description": "URL-friendly slug"
+        },
+        "title_en": {
+            "type": "string",
+            "description": "Title in English"
+        },
+        "title_my": {
+            "type": "string",
+            "description": "Title in Burmese"
+        },
+        "title_zh": {
+            "type": "string",
+            "description": "Title in Chinese"
+        },
+        "content_en": {
+            "type": "string",
+            "description": "Content in English (markdown)"
+        },
+        "content_my": {
+            "type": "string",
+            "description": "Content in Burmese (markdown)"
+        },
+        "content_zh": {
+            "type": "string",
+            "description": "Content in Chinese (markdown)"
+        },
+        "category": {
+            "type": "string",
+            "description": "Article category"
+        },
+        "thumbnail_url": {
+            "type": "string",
+            "description": "Thumbnail image URL"
+        },
+        "is_published": {
+            "type": "boolean",
+            "description": "Whether article is published"
+        },
+        "sort_order": {
+            "type": "integer",
+            "description": "Display order"
+        }
+    },
+    "required": [
+        "id",
+        "slug",
+        "title_en",
+        "is_published"
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "title": "page_contents",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "page_key": {
+            "type": "string",
+            "description": "Page identifier"
+        },
+        "section_key": {
+            "type": "string",
+            "description": "Section within the page"
+        },
+        "content_en": {
+            "type": "string",
+            "description": "Content in English"
+        },
+        "content_my": {
+            "type": "string",
+            "description": "Content in Burmese"
+        },
+        "content_zh": {
+            "type": "string",
+            "description": "Content in Chinese"
+        },
+        "image_url": {
+            "type": "string",
+            "description": "Associated image URL"
+        },
+        "is_visible": {
+            "type": "boolean",
+            "description": "Whether section is visible"
+        },
+        "sort_order": {
+            "type": "integer",
+            "description": "Display order"
+        }
+    },
+    "required": [
+        "id",
+        "page_key",
+        "section_key"
+    ]
+}

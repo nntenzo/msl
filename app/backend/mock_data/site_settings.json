@@ -1,0 +1,87 @@
+[
+    {
+        "setting_key": "company_name_en",
+        "setting_value": "Myanmar Swine Livestock Co., Ltd.",
+        "category": "general"
+    },
+    {
+        "setting_key": "company_name_my",
+        "setting_value": "မြန်မာ ဝက်မွေးမြူရေး ကုမ္ပဏီ လီမိတက်",
+        "category": "general"
+    },
+    {
+        "setting_key": "company_name_zh",
+        "setting_value": "缅甸养猪畜牧有限公司",
+        "category": "general"
+    },
+    {
+        "setting_key": "contact_phone",
+        "setting_value": "+95 9 123 456 789",
+        "category": "contact"
+    },
+    {
+        "setting_key": "contact_email",
+        "setting_value": "info@myanmarswine.com",
+        "category": "contact"
+    },
+    {
+        "setting_key": "contact_address_en",
+        "setting_value": "Industrial Zone, Yangon Region, Myanmar",
+        "category": "contact"
+    },
+    {
+        "setting_key": "contact_address_my",
+        "setting_value": "စက်မှုဇုန်၊ ရန်ကုန်တိုင်းဒေသကြီး၊ မြန်မာ",
+        "category": "contact"
+    },
+    {
+        "setting_key": "contact_address_zh",
+        "setting_value": "缅甸仰光地区工业区",
+        "category": "contact"
+    },
+    {
+        "setting_key": "show_prices",
+        "setting_value": "true",
+        "category": "display"
+    },
+    {
+        "setting_key": "lang_en_enabled",
+        "setting_value": "true",
+        "category": "language"
+    },
+    {
+        "setting_key": "lang_my_enabled",
+        "setting_value": "true",
+        "category": "language"
+    },
+    {
+        "setting_key": "lang_zh_enabled",
+        "setting_value": "true",
+        "category": "language"
+    },
+    {
+        "setting_key": "default_language",
+        "setting_value": "my",
+        "category": "language"
+    },
+    {
+        "setting_key": "solar_capacity_kw",
+        "setting_value": "500",
+        "category": "green_energy"
+    },
+    {
+        "setting_key": "biogas_capacity_kw",
+        "setting_value": "300",
+        "category": "green_energy"
+    },
+    {
+        "setting_key": "daily_power_kwh",
+        "setting_value": "2000",
+        "category": "green_energy"
+    },
+    {
+        "setting_key": "operation_start_date",
+        "setting_value": "2023-01-01",
+        "category": "green_energy"
+    }
+]

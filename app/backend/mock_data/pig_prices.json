@@ -1,0 +1,29 @@
+[
+    {
+        "price_type": "commercial",
+        "price_per_kg": 5500,
+        "price_per_head": 550000,
+        "is_active": true,
+        "notes_en": "Live weight, farm gate price",
+        "notes_my": "အသက်ရှင်အလေးချိန်၊ ခြံဝင်းစျေးနှုန်း",
+        "notes_zh": "活重，农场价格"
+    },
+    {
+        "price_type": "parent_stock",
+        "price_per_kg": 8000,
+        "price_per_head": 1200000,
+        "is_active": true,
+        "notes_en": "Breeding quality, includes health certificate",
+        "notes_my": "မွေးမြူရေးအရည်အသွေး၊ ကျန်းမာရေးလက်မှတ်ပါဝင်",
+        "notes_zh": "种猪品质，含健康证书"
+    },
+    {
+        "price_type": "grandparent_stock",
+        "price_per_kg": 12000,
+        "price_per_head": 2500000,
+        "is_active": false,
+        "notes_en": "Premium genetics, limited availability",
+        "notes_my": "အကောင်းဆုံးမျိုးရိုးဗီဇ၊ အကန့်အသတ်ရရှိနိုင်",
+        "notes_zh": "优质遗传基因，限量供应"
+    }
+]

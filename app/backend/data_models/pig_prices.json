@@ -1,0 +1,44 @@
+{
+    "title": "pig_prices",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "integer",
+            "description": "Primary key, auto-increment"
+        },
+        "price_type": {
+            "type": "string",
+            "description": "Type of pig: commercial, parent_stock, grandparent_stock"
+        },
+        "price_per_kg": {
+            "type": "number",
+            "description": "Price per kilogram in MMK"
+        },
+        "price_per_head": {
+            "type": "number",
+            "description": "Price per head in MMK"
+        },
+        "is_active": {
+            "type": "boolean",
+            "description": "Whether this price is currently displayed"
+        },
+        "notes_en": {
+            "type": "string",
+            "description": "Notes in English"
+        },
+        "notes_my": {
+            "type": "string",
+            "description": "Notes in Burmese"
+        },
+        "notes_zh": {
+            "type": "string",
+            "description": "Notes in Chinese"
+        }
+    },
+    "required": [
+        "id",
+        "price_type",
+        "price_per_kg",
+        "is_active"
+    ]
+}

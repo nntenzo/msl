@@ -1,0 +1,50 @@
+[
+    {
+        "slug": "swine-nutrition-guide",
+        "title_en": "Complete Swine Nutrition Guide",
+        "title_my": "ဝက်အာဟာရလမ်းညွှန် အပြည့်အစုံ",
+        "title_zh": "完整的猪营养指南",
+        "content_en": "## Understanding Swine Nutrition\n\nProper nutrition is the foundation of successful pig farming. Pigs require a balanced diet of proteins, carbohydrates, fats, vitamins, and minerals at every stage of growth.\n\n### Growth Stages and Feed Requirements\n\n**Starter Phase (5-25 kg)**\nYoung piglets need highly digestible feeds with 20-22% crude protein. Creep feed should be introduced at 7-10 days of age to supplement sow's milk.\n\n**Grower Phase (25-60 kg)**\nProtein requirements decrease to 16-18%. Energy-dense feeds promote rapid muscle development. Lysine is the first limiting amino acid.\n\n**Finisher Phase (60-110 kg)**\nProtein drops to 13-15%. Focus shifts to feed efficiency and carcass quality. Ractopamine-free programs are increasingly preferred.\n\n### Key Nutrients\n- **Lysine**: Essential for lean muscle growth\n- **Calcium & Phosphorus**: Critical for bone development\n- **Vitamin E & Selenium**: Supports immune function\n- **Zinc**: Promotes skin health and wound healing\n\n### Water Requirements\nPigs need 2-3 liters of water per kg of dry feed consumed. Clean, fresh water must be available at all times.",
+        "content_my": "## ဝက်အာဟာရကို နားလည်ခြင်း\n\nမှန်ကန်သော အာဟာရသည် ဝက်မွေးမြူရေး အောင်မြင်မှု၏ အခြေခံဖြစ်သည်။ ဝက်များသည် ကြီးထွားမှုအဆင့်တိုင်းတွင် ပရိုတင်း၊ ကာဗိုဟိုက်ဒရိတ်၊ အဆီ၊ ဗီတာမင်နှင့် သတ္တုဓာတ်များ ဟန်ချက်ညီစွာ လိုအပ်ပါသည်။",
+        "content_zh": "## 了解猪的营养\n\n适当的营养是成功养猪的基础。猪在每个生长阶段都需要蛋白质、碳水化合物、脂肪、维生素和矿物质的均衡饮食。",
+        "category": "nutrition",
+        "is_published": true,
+        "sort_order": 1
+    },
+    {
+        "slug": "breeding-management",
+        "title_en": "Swine Breeding Management Best Practices",
+        "title_my": "ဝက်မျိုးပွားရေး စီမံခန့်ခွဲမှု အကောင်းဆုံးအလေ့အကျင့်များ",
+        "title_zh": "猪育种管理最佳实践",
+        "content_en": "## Breeding Program Fundamentals\n\nA well-managed breeding program is essential for maintaining genetic progress and farm profitability.\n\n### Gilt Selection\n- Select gilts from top-performing sows\n- Minimum 14 functional teats\n- Sound feet and leg structure\n- First breeding at 7-8 months (130-140 kg)\n\n### Heat Detection\nGilts and sows show estrus every 18-24 days. Signs include:\n- Swollen, reddened vulva\n- Restlessness and mounting behavior\n- Standing reflex when back pressure applied\n- Reduced feed intake\n\n### Artificial Insemination (AI)\nAI allows access to superior genetics without maintaining multiple boars.\n- Inseminate 12-24 hours after standing heat detected\n- Use fresh semen within 3 days of collection\n- Maintain semen at 17°C during storage\n\n### Gestation Management\nGestation lasts approximately 114 days (3 months, 3 weeks, 3 days).\n- Confirm pregnancy at 21-25 days post-breeding\n- Move to farrowing crate 3-5 days before due date\n- Monitor body condition throughout pregnancy",
+        "content_my": "## မျိုးပွားရေးအစီအစဉ် အခြေခံများ\n\nကောင်းမွန်စွာ စီမံခန့်ခွဲထားသော မျိုးပွားရေးအစီအစဉ်သည် မျိုးရိုးဗီဇတိုးတက်မှုနှင့် ခြံဝင်းအမြတ်အစွန်းကို ထိန်းသိမ်းရန် မရှိမဖြစ်လိုအပ်ပါသည်။",
+        "content_zh": "## 育种计划基础\n\n良好管理的育种计划对于维持遗传进步和农场盈利能力至关重要。",
+        "category": "breeding",
+        "is_published": true,
+        "sort_order": 2
+    },
+    {
+        "slug": "disease-prevention",
+        "title_en": "Common Swine Diseases and Prevention",
+        "title_my": "ဝက်ရောဂါများနှင့် ကာကွယ်ရေး",
+        "title_zh": "常见猪病及预防",
+        "content_en": "## Biosecurity and Disease Prevention\n\nPrevention is always more cost-effective than treatment. A comprehensive biosecurity program protects your herd from devastating diseases.\n\n### African Swine Fever (ASF)\nASF is a highly contagious viral disease with nearly 100% mortality. There is no vaccine or treatment.\n- Strict visitor and vehicle protocols\n- No swill feeding\n- Quarantine new animals for 30 days\n- Report any suspicious deaths immediately\n\n### Porcine Reproductive and Respiratory Syndrome (PRRS)\n- Causes reproductive failure in sows and respiratory disease in pigs\n- Vaccination programs available\n- All-in/all-out management reduces spread\n\n### Classical Swine Fever (CSF)\n- Highly contagious viral disease\n- Vaccination is the primary control method\n- Notifiable disease in most countries\n\n### Biosecurity Measures\n1. **Perimeter security**: Fencing, locked gates, signage\n2. **Personnel protocols**: Shower-in/shower-out, dedicated clothing\n3. **Vehicle management**: Disinfection arcs, designated parking\n4. **Animal flow**: One-way movement, quarantine facilities\n5. **Pest control**: Rodent and bird management programs",
+        "content_my": "## ဇီဝလုံခြုံရေးနှင့် ရောဂါကာကွယ်ရေး\n\nကာကွယ်ခြင်းသည် ကုသခြင်းထက် အမြဲတမ်း ကုန်ကျစရိတ်သက်သာပါသည်။",
+        "content_zh": "## 生物安全与疾病预防\n\n预防总是比治疗更具成本效益。全面的生物安全计划可以保护您的猪群免受毁灭性疾病的侵害。",
+        "category": "health",
+        "is_published": true,
+        "sort_order": 3
+    },
+    {
+        "slug": "farm-management-tips",
+        "title_en": "Modern Pig Farm Management",
+        "title_my": "ခေတ်မီဝက်ခြံ စီမံခန့်ခွဲမှု",
+        "title_zh": "现代猪场管理",
+        "content_en": "## Efficient Farm Management\n\nModern pig farming requires systematic approaches to housing, environment control, and record keeping.\n\n### Housing Design\n- Adequate ventilation (minimum 0.5 m³/min per sow)\n- Temperature control: 18-22°C for adults, 30-34°C for newborn piglets\n- Proper drainage and waste management\n- Non-slip flooring with appropriate slat widths\n\n### Environmental Control\n- Monitor ammonia levels (below 25 ppm)\n- Humidity between 50-70%\n- Lighting: 16 hours light for breeding stock\n- Cooling systems for tropical climates\n\n### Record Keeping\nTrack these key performance indicators:\n- Pigs weaned per sow per year (target: 25-30)\n- Feed conversion ratio (target: 2.5-2.8)\n- Average daily gain (target: 750-900g)\n- Pre-weaning mortality (target: below 8%)\n- Days to market weight (target: 150-170 days)\n\n### Waste Management\n- Biogas digesters convert waste to energy\n- Composting for crop fertilizer\n- Lagoon systems for liquid waste treatment\n- Odor management through covered storage",
+        "content_my": "## ထိရောက်သော ခြံဝင်းစီမံခန့်ခွဲမှု\n\nခေတ်မီဝက်မွေးမြူရေးတွင် အိမ်ရာ၊ ပတ်ဝန်းကျင်ထိန်းချုပ်မှုနှင့် မှတ်တမ်းထိန်းသိမ်းမှုအတွက် စနစ်တကျချဉ်းကပ်မှုများ လိုအပ်ပါသည်။",
+        "content_zh": "## 高效农场管理\n\n现代养猪业需要系统化的方法来管理住房、环境控制和记录保存。",
+        "category": "management",
+        "is_published": true,
+        "sort_order": 4
+    }
+]

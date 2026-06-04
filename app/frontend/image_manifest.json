@@ -1,0 +1,48 @@
+{
+  "status": "success",
+  "results": [
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hhelqaahua/hero-banner-modern-pig-farm.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hhelqaahua/hero-banner-modern-pig-farm.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hhelqaahua/hero-banner-modern-pig-farm.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Aerial view of a modern pig farm in Myanmar with lush green surroundings, clean white buildings, solar panels on rooftops, and organized pig housing facilities. Tropical landscape with palm trees in the background, golden hour lighting creating warm atmosphere",
+      "style": "photorealistic",
+      "filename": "hero-banner-modern-pig-farm.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hgckiaahuq/products-commercial-pigs.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hgckiaahuq/products-commercial-pigs.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hgckiaahuq/products-commercial-pigs.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Close-up of healthy pink pigs in a clean, modern indoor facility with proper ventilation and lighting. Multiple well-fed commercial pigs showing excellent body condition, professional farming environment",
+      "style": "photorealistic",
+      "filename": "products-commercial-pigs.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hewhqaahwq/sustainability-solar-biogas.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hewhqaahwq/sustainability-solar-biogas.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hewhqaahwq/sustainability-solar-biogas.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Large solar panel array on a farm building rooftop with biogas digester tanks visible in the background. Green energy installation in tropical setting, blue sky with white clouds, sustainable agriculture concept",
+      "style": "photorealistic",
+      "filename": "sustainability-solar-biogas.jpg"
+    },
+    {
+      "status": "success",
+      "path": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3he26iaahvq/biosecurity-entrance-station.png",
+      "absolute_path": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3he26iaahvq/biosecurity-entrance-station.png",
+      "url": "https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3he26iaahvq/biosecurity-entrance-station.png",
+      "message": "Image generated successfully.\n\nNote: The image is on CDN and will be displayed automatically. Just describe what you created briefly, no need to mention filenames or URLs.",
+      "description": "Modern biosecurity entrance to a pig farm showing disinfection station, clean white walls, foot bath, protective gear hanging on hooks, and a vehicle wash station. Professional and sterile environment emphasizing hygiene and safety",
+      "style": "photorealistic",
+      "filename": "biosecurity-entrance-station.jpg"
+    }
+  ],
+  "success_count": 4,
+  "failed_count": 0,
+  "message": "Generated 4/4 images"
+}

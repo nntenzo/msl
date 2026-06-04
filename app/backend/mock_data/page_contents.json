@@ -1,0 +1,92 @@
+[
+    {
+        "page_key": "home",
+        "section_key": "hero",
+        "content_en": "Myanmar's First Grandparent Stock Producer | Leading the Future of Swine Genetics",
+        "content_my": "မြန်မာနိုင်ငံ၏ ပထမဆုံး Grandparent Stock ထုတ်လုပ်သူ | ဝက်မျိုးရိုးဗီဇ၏ အနာဂတ်ကို ဦးဆောင်ခြင်း",
+        "content_zh": "缅甸首家祖代种猪生产商 | 引领猪遗传学的未来",
+        "is_visible": true,
+        "sort_order": 1
+    },
+    {
+        "page_key": "home",
+        "section_key": "intro",
+        "content_en": "Myanmar Swine Livestock Co., Ltd. is a pioneering swine genetics company and the first in Myanmar to produce Grandparent Stock (GP). We also produce Parent Stock (PS) and Commercial Pigs with an annual productivity of approximately 3,800 commercial pigs. Our mission is to provide the region with safe, high-quality protein while maintaining the highest standards of biosecurity and environmental sustainability.",
+        "content_my": "မြန်မာ ဝက်မွေးမြူရေး ကုမ္ပဏီ လီမိတက်သည် ရှေ့ဆောင်ဝက်မျိုးရိုးဗီဇကုမ္ပဏီဖြစ်ပြီး မြန်မာနိုင်ငံတွင် Grandparent Stock (GP) ထုတ်လုပ်သည့် ပထမဆုံးကုမ္ပဏီဖြစ်ပါသည်။ ကျွန်ုပ်တို့သည် Parent Stock (PS) နှင့် ကုန်သွယ်ရေးဝက်များကိုလည်း ထုတ်လုပ်ပြီး နှစ်စဉ် ကုန်သွယ်ရေးဝက် ၃,၈၀၀ ကောင်ခန့် ထုတ်လုပ်နိုင်ပါသည်။",
+        "content_zh": "缅甸养猪畜牧有限公司是一家先驱性的猪遗传学公司，也是缅甸第一家生产祖代种猪（GP）的公司。我们还生产父母代种猪（PS）和商品猪，年产量约3800头商品猪。",
+        "is_visible": true,
+        "sort_order": 2
+    },
+    {
+        "page_key": "home",
+        "section_key": "mission",
+        "content_en": "Our mission is to solve the region's food security challenges by providing safe, affordable, and high-quality pork protein to the people of Myanmar and beyond. We believe that through advanced genetics, sustainable farming practices, and unwavering commitment to biosecurity, we can transform the swine industry in Southeast Asia.",
+        "content_my": "ကျွန်ုပ်တို့၏ ရည်မှန်းချက်မှာ မြန်မာနိုင်ငံနှင့် ပြင်ပလူထုအတွက် ဘေးကင်း၊ တတ်နိုင်သော၊ အရည်အသွေးမြင့် ဝက်သားပရိုတင်းကို ပံ့ပိုးပေးခြင်းဖြင့် ဒေသ၏ စားနပ်ရိက္ခာဖူလုံရေး စိန်ခေါ်မှုများကို ဖြေရှင်းရန်ဖြစ်ပါသည်။",
+        "content_zh": "我们的使命是通过向缅甸及其他地区的人民提供安全、实惠、高质量的猪肉蛋白质来解决该地区的粮食安全挑战。",
+        "is_visible": true,
+        "sort_order": 3
+    },
+    {
+        "page_key": "products",
+        "section_key": "gp",
+        "content_en": "## Grandparent Stock (GP)\n\nAs Myanmar's first and only GP producer, we maintain the highest genetic lines imported from world-renowned breeding companies. Our GP animals represent the pinnacle of swine genetics, carefully selected for:\n\n- Superior growth rates and feed efficiency\n- Excellent reproductive performance\n- Disease resistance and robustness\n- Optimal carcass quality\n\nOur GP program ensures a continuous supply of elite genetics to our PS multiplication program, maintaining genetic progress for generations to come.",
+        "content_my": "## Grandparent Stock (GP)\n\nမြန်မာနိုင်ငံ၏ ပထမဆုံးနှင့် တစ်ခုတည်းသော GP ထုတ်လုပ်သူအနေဖြင့် ကျွန်ုပ်တို့သည် ကမ္ဘာကျော် မျိုးပွားရေးကုမ္ပဏီများမှ တင်သွင်းထားသော အမြင့်ဆုံးမျိုးရိုးဗီဇလိုင်းများကို ထိန်းသိမ်းထားပါသည်။",
+        "content_zh": "## 祖代种猪（GP）\n\n作为缅甸第一家也是唯一的GP生产商，我们维护着从世界知名育种公司引进的最高遗传系。",
+        "is_visible": true,
+        "sort_order": 1
+    },
+    {
+        "page_key": "products",
+        "section_key": "ps",
+        "content_en": "## Parent Stock (PS)\n\nOur Parent Stock program multiplies the superior genetics from our GP herd to produce high-performing breeding animals for commercial farms. PS animals offer:\n\n- High litter sizes (12-14 piglets born alive)\n- Excellent mothering ability\n- Strong milking capacity\n- Consistent performance across environments\n\nWe supply PS gilts and boars to farms throughout Myanmar, helping elevate the national swine herd's genetic potential.",
+        "content_my": "## Parent Stock (PS)\n\nကျွန်ုပ်တို့၏ Parent Stock အစီအစဉ်သည် ကုန်သွယ်ရေးခြံများအတွက် စွမ်းဆောင်ရည်မြင့် မျိုးပွားတိရစ္ဆာန်များ ထုတ်လုပ်ရန် GP အုပ်စုမှ ထူးချွန်သော မျိုးရိုးဗီဇများကို မြှောက်ပေးပါသည်။",
+        "content_zh": "## 父母代种猪（PS）\n\n我们的父母代种猪计划将GP猪群的优良遗传基因进行扩繁，为商业农场生产高性能种猪。",
+        "is_visible": true,
+        "sort_order": 2
+    },
+    {
+        "page_key": "products",
+        "section_key": "commercial",
+        "content_en": "## Commercial Pigs\n\nOur commercial pigs are the result of carefully planned crossbreeding programs that maximize hybrid vigor. With approximately 3,800 pigs produced annually, we deliver:\n\n- Fast growth (market weight in 150-170 days)\n- Excellent feed conversion (2.5-2.8 FCR)\n- Lean, high-quality carcasses\n- Uniform batches for consistent market supply\n\nAll commercial pigs are raised under strict biosecurity protocols with full traceability from birth to market.",
+        "content_my": "## ကုန်သွယ်ရေးဝက်များ\n\nကျွန်ုပ်တို့၏ ကုန်သွယ်ရေးဝက်များသည် ဟိုက်ဘရစ်အားကို အမြင့်ဆုံးဖြစ်အောင် သေချာစွာ စီစဉ်ထားသော မျိုးစပ်အစီအစဉ်များ၏ ရလဒ်ဖြစ်ပါသည်။ နှစ်စဉ် ဝက် ၃,၈၀၀ ကောင်ခန့် ထုတ်လုပ်ပါသည်။",
+        "content_zh": "## 商品猪\n\n我们的商品猪是精心规划的杂交育种计划的成果，最大化杂种优势。年产约3800头商品猪。",
+        "is_visible": true,
+        "sort_order": 3
+    },
+    {
+        "page_key": "sustainability",
+        "section_key": "solar",
+        "content_en": "## Solar Energy System\n\nOur farm operates a comprehensive solar panel installation that generates clean electricity for daily operations. The solar system significantly reduces our carbon footprint while providing reliable power for:\n\n- Ventilation and cooling systems\n- Lighting across all facilities\n- Feed processing equipment\n- Water pumping and treatment\n\nWith our solar capacity, we achieve near-zero dependence on the national power grid, making our operations resilient and environmentally responsible.",
+        "content_my": "## ဆိုလာစွမ်းအင်စနစ်\n\nကျွန်ုပ်တို့ခြံသည် နေ့စဉ်လုပ်ငန်းဆောင်ရွက်မှုများအတွက် သန့်ရှင်းသောလျှပ်စစ်ဓာတ်အား ထုတ်လုပ်ပေးသည့် ဆိုလာပြားတပ်ဆင်မှု ပြည့်စုံစွာ လည်ပတ်ပါသည်။",
+        "content_zh": "## 太阳能系统\n\n我们的农场运营着全面的太阳能电池板安装系统，为日常运营提供清洁电力。",
+        "is_visible": true,
+        "sort_order": 1
+    },
+    {
+        "page_key": "sustainability",
+        "section_key": "biogas",
+        "content_en": "## Biogas Generation\n\nWe convert pig waste into valuable biogas through anaerobic digestion. This innovative system:\n\n- Produces methane for electricity generation\n- Reduces greenhouse gas emissions\n- Eliminates waste disposal challenges\n- Creates nutrient-rich digestate for agriculture\n\nOur biogas generators complement our solar system, ensuring 24/7 renewable energy availability regardless of weather conditions.",
+        "content_my": "## ဇီဝဓာတ်ငွေ့ ထုတ်လုပ်ခြင်း\n\nကျွန်ုပ်တို့သည် ဝက်အမှိုက်ကို အဲရိုးဘစ်ခွဲခြမ်းခြင်းမှတစ်ဆင့် တန်ဖိုးရှိသော ဇီဝဓာတ်ငွေ့အဖြစ် ပြောင်းလဲပါသည်။",
+        "content_zh": "## 沼气发电\n\n我们通过厌氧消化将猪粪转化为有价值的沼气。",
+        "is_visible": true,
+        "sort_order": 2
+    },
+    {
+        "page_key": "sustainability",
+        "section_key": "odor",
+        "content_en": "## Odor Management\n\nWe employ advanced odor control technologies to ensure our farm is a good neighbor:\n\n- Covered waste storage and treatment facilities\n- Biofilter systems for air treatment\n- Strategic tree planting as natural windbreaks\n- Regular monitoring of air quality\n- Proper ventilation design to minimize emissions\n\nOur commitment to odor management means surrounding communities can coexist comfortably with our operations.",
+        "content_my": "## အနံ့စီမံခန့်ခွဲမှု\n\nကျွန်ုပ်တို့ခြံသည် ကောင်းမွန်သော အိမ်နီးချင်းဖြစ်ရန် အဆင့်မြင့် အနံ့ထိန်းချုပ်ရေးနည်းပညာများကို အသုံးပြုပါသည်။",
+        "content_zh": "## 气味管理\n\n我们采用先进的气味控制技术，确保我们的农场是一个好邻居。",
+        "is_visible": true,
+        "sort_order": 3
+    },
+    {
+        "page_key": "sustainability",
+        "section_key": "biosecurity",
+        "content_en": "## Biosecurity Excellence\n\nBiosecurity is the cornerstone of our operations. We implement multi-layered protection:\n\n### Perimeter Control\n- Secured fencing around entire facility\n- Controlled entry points with disinfection\n- Vehicle wash stations at all entrances\n\n### Personnel Protocols\n- Mandatory shower-in/shower-out\n- Farm-specific clothing and footwear\n- 48-hour pig-free period for visitors\n\n### Animal Health\n- Comprehensive vaccination programs\n- Regular health monitoring and testing\n- Strict quarantine for new animals\n- All-in/all-out management systems\n\n### Feed and Water Safety\n- Treated water supply\n- Heat-treated feed ingredients\n- Sealed feed storage facilities",
+        "content_my": "## ဇီဝလုံခြုံရေး ထူးချွန်မှု\n\nဇီဝလုံခြုံရေးသည် ကျွန်ုပ်တို့လုပ်ငန်းဆောင်ရွက်မှုများ၏ အုတ်မြစ်ဖြစ်ပါသည်။ ကျွန်ုပ်တို့သည် အလွှာပေါင်းစုံ ကာကွယ်မှုကို အကောင်အထည်ဖော်ပါသည်။",
+        "content_zh": "## 卓越的生物安全\n\n生物安全是我们运营的基石。我们实施多层保护措施。",
+        "is_visible": true,
+        "sort_order": 4
+    }
+]
