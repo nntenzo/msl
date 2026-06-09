@@ -1,9 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { useLanguage } from '@/lib/i18n';
 
 const Footer: React.FC = () => {
   const { t } = useLanguage();
+
+  const scrollTo = (id: string) => {
+    window.location.href = '/#' + id;
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  };
 
   return (
     <footer className="bg-green-900 text-white py-12">
@@ -11,8 +18,8 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-green-800 font-bold text-lg">MS</span>
+              <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">MSL</span>
               </div>
               <span className="font-bold text-lg">Myanmar Swine Livestock</span>
             </div>
@@ -24,11 +31,11 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2">
-              <Link to="/" className="block text-green-200 hover:text-white text-sm">{t('home')}</Link>
-              <Link to="/products" className="block text-green-200 hover:text-white text-sm">{t('products')}</Link>
-              <Link to="/sustainability" className="block text-green-200 hover:text-white text-sm">{t('sustainability')}</Link>
-              <Link to="/knowledge" className="block text-green-200 hover:text-white text-sm">{t('knowledge')}</Link>
-              <Link to="/contact" className="block text-green-200 hover:text-white text-sm">{t('contact')}</Link>
+              <button onClick={() => scrollTo('home')} className="block text-green-200 hover:text-white text-sm">{t('home')}</button>
+              <button onClick={() => scrollTo('products')} className="block text-green-200 hover:text-white text-sm">{t('products')}</button>
+              <button onClick={() => scrollTo('sustainability')} className="block text-green-200 hover:text-white text-sm">{t('sustainability')}</button>
+              <button onClick={() => scrollTo('knowledge')} className="block text-green-200 hover:text-white text-sm">{t('knowledge')}</button>
+              <button onClick={() => scrollTo('contact')} className="block text-green-200 hover:text-white text-sm">{t('contact')}</button>
             </div>
           </div>
 

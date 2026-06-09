@@ -43,9 +43,10 @@ const translations: Record<string, Record<Language, string>> = {
   food_security: { en: 'Food Security & Safety', my: 'စားနပ်ရိက္ခာဖူလုံရေးနှင့် ဘေးကင်းရေး', zh: '食品安全与保障' },
   protein_for_people: { en: 'Protein for People', my: 'လူတို့အတွက် ပရိုတင်း', zh: '为人民提供蛋白质' },
   annual_production: { en: 'Annual Production', my: 'နှစ်စဉ်ထုတ်လုပ်မှု', zh: '年产量' },
+  scroll_to_top: { en: 'Back to Top', my: 'ထိပ်သို့ပြန်သွားရန်', zh: '回到顶部' },
   pigs_per_year: { en: 'pigs/year', my: 'ကောင်/နှစ်', zh: '头/年' },
   first_in_myanmar: { en: 'First in Myanmar', my: 'မြန်မာနိုင်ငံတွင် ပထမဆုံး', zh: '缅甸首家' },
-  gp_producer: { en: 'GP Producer', my: 'GP ထုတ်လုပ်သူ', zh: 'GP生产商' },
+  gp_producer: { en: 'GP Breeder', my: 'GP မွေးမြူသူ', zh: 'GP育种商' },
   zero_grid: { en: 'Near Zero Grid', my: 'ဓာတ်အားလိုင်း သုံးစွဲမှုနီးပါးသုည', zh: '近零电网依赖' },
   power_dependency: { en: 'Power Dependency', my: 'ဓာတ်အားမှီခိုမှု', zh: '电力依赖' },
   read_article: { en: 'Read Article', my: 'ဆောင်းပါးဖတ်ရန်', zh: '阅读文章' },
@@ -60,7 +61,7 @@ const translations: Record<string, Record<Language, string>> = {
 };
 
 export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('my');
+  const [language, setLanguage] = useState<Language>('en');
   const [enabledLanguages, setEnabledLanguages] = useState<Language[]>(['my', 'en', 'zh']);
 
   useEffect(() => {

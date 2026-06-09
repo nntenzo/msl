@@ -21,44 +21,71 @@ const Header: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navItems = [
-    { path: '/', label: t('home') },
-    { path: '/products', label: t('products') },
-    { path: '/sustainability', label: t('sustainability') },
-    { path: '/knowledge', label: t('knowledge') },
-    { path: '/contact', label: t('contact') },
-  ];
+  const isHomePage = location.pathname === '/';
 
-  const isActive = (path: string) => location.pathname === path;
+  const navItems = isHomePage
+    ? [
+        { href: '#home', label: t('home') },
+        { href: '#products', label: t('products') },
+        { href: '#sustainability', label: t('sustainability') },
+        { href: '#knowledge', label: t('knowledge') },
+        { href: '#contact', label: t('contact') },
+      ]
+    : [
+        { href: '/', label: t('home') },
+        { href: '/#products', label: t('products') },
+        { href: '/#sustainability', label: t('sustainability') },
+        { href: '/#knowledge', label: t('knowledge') },
+        { href: '/#contact', label: t('contact') },
+      ];
+
+  const handleNavClick = (href: string) => {
+    setMobileMenuOpen(false);
+    if (href.startsWith('#')) {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-lg">MS</span>
+            <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">MSL</span>
             </div>
-            <span className="font-bold text-green-800 text-sm sm:text-base hidden sm:block">
-              Myanmar Swine Livestock
-            </span>
+            <div className="hidden sm:block">
+              <span className="font-bold text-green-800 text-sm leading-tight block">Myanmar Swine</span>
+              <span className="text-xs text-gray-500 leading-tight block">Livestock Co., Ltd.</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`text-sm font-medium transition-colors ${
-                  isActive(item.path)
-                    ? 'text-green-600 border-b-2 border-green-600 pb-1'
-                    : 'text-gray-700 hover:text-green-600'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) =>
+              item.href.startsWith('#') ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
+                  className="text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="text-sm font-medium text-gray-700 hover:text-green-600 transition-colors"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -112,18 +139,30 @@ const Header: React.FC = () => {
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
           <div className="md:hidden pb-4">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`block py-2 px-3 rounded text-sm ${
-                  isActive(item.path) ? 'bg-green-50 text-green-600' : 'text-gray-700'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map((item) =>
+              item.href.startsWith('#') ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
+                  className="block py-2 px-3 rounded text-sm text-gray-700 hover:bg-green-50"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-2 px-3 rounded text-sm text-gray-700 hover:bg-green-50"
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
             <Link
               to="/admin"
               onClick={() => setMobileMenuOpen(false)}
