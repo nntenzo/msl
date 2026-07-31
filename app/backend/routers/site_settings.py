@@ -77,7 +77,7 @@ class Site_settingsBatchDeleteRequest(BaseModel):
 # ---------- Routes ----------
 @router.get("", response_model=Site_settingsListResponse)
 async def query_site_settingss(
-    query: str = Query(None, description='Query conditions as JSON, e.g. {"id":2} or {"id":{"$gte":2}}'),
+    query: str = Query(None, description="Query conditions (JSON string)"),
     sort: str = Query(None, description="Sort field (prefix with '-' for descending)"),
     skip: int = Query(0, ge=0, description="Number of records to skip"),
     limit: int = Query(20, ge=1, le=2000, description="Max number of records to return"),
@@ -107,9 +107,6 @@ async def query_site_settingss(
         return result
     except HTTPException:
         raise
-    except ValueError as e:
-        logger.warning(f"Invalid site_settings query: {str(e)}")
-        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         logger.error(f"Error querying site_settingss: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
@@ -117,7 +114,7 @@ async def query_site_settingss(
 
 @router.get("/all", response_model=Site_settingsListResponse)
 async def query_site_settingss_all(
-    query: str = Query(None, description='Query conditions as JSON, e.g. {"id":2} or {"id":{"$gte":2}}'),
+    query: str = Query(None, description="Query conditions (JSON string)"),
     sort: str = Query(None, description="Sort field (prefix with '-' for descending)"),
     skip: int = Query(0, ge=0, description="Number of records to skip"),
     limit: int = Query(20, ge=1, le=2000, description="Max number of records to return"),
@@ -147,9 +144,6 @@ async def query_site_settingss_all(
         return result
     except HTTPException:
         raise
-    except ValueError as e:
-        logger.warning(f"Invalid site_settings query: {str(e)}")
-        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         logger.error(f"Error querying site_settingss: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")

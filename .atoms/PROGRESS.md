@@ -30,6 +30,3 @@ Build a comprehensive website for Myanmar Swine Livestock Co., Ltd. with:
 
 ## Progress Log
 - Started project planning and template initialization
-- Updated contact details: phone +95 9 123 456 789, email office@msl.com.mm, address Nyaung Na Pin Farming Zone, Yangon, Myanmar
-- Created backend contact form API (/api/v1/contact/send) that stores messages and sends email to office@msl.com.mm
-- Updated all frontend fallback contact info across Index, Contact, and Footer components

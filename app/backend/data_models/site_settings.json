@@ -3,19 +3,24 @@
     "type": "object",
     "properties": {
         "id": {
-            "type": "integer"
+            "type": "integer",
+            "description": "Primary key, auto-increment"
         },
         "setting_key": {
-            "type": "string"
+            "type": "string",
+            "description": "Setting identifier key"
         },
         "setting_value": {
-            "type": "string"
+            "type": "string",
+            "description": "Setting value as JSON string"
         },
         "category": {
-            "type": "string"
+            "type": "string",
+            "description": "Category grouping for settings"
         }
     },
     "required": [
+        "id",
         "setting_key",
         "setting_value"
     ]

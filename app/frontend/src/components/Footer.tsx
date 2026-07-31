@@ -43,8 +43,8 @@ const Footer: React.FC = () => {
             <h3 className="font-semibold mb-4">{t('contact')}</h3>
             <div className="space-y-2 text-green-200 text-sm">
               <p>+95 9 123 456 789</p>
-              <p>office@msl.com.mm</p>
-              <p>Nyaung Na Pin Farming Zone, Yangon, Myanmar</p>
+              <p>info@myanmarswine.com</p>
+              <p>Industrial Zone, Yangon Region, Myanmar</p>
             </div>
           </div>
         </div>
