@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
                     <h3 className="font-semibold text-gray-800">
                       {language === 'my' ? 'လိပ်စာ' : language === 'zh' ? '地址' : 'Address'}
                     </h3>
-                    <p className="text-gray-600">{getAddress() || 'Industrial Zone, Yangon Region, Myanmar'}</p>
+                    <p className="text-gray-600">{getAddress() || 'Nyaung Na Pin Farming Zone, Yangon, Myanmar'}</p>
                   </div>
                 </div>
 
@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
                     <h3 className="font-semibold text-gray-800">
                       {language === 'my' ? 'အီးမေးလ်' : language === 'zh' ? '邮箱' : 'Email'}
                     </h3>
-                    <p className="text-gray-600">{settings.contact_email || 'info@myanmarswine.com'}</p>
+                    <p className="text-gray-600">{settings.contact_email || 'office@msl.com.mm'}</p>
                   </div>
                 </div>
               </div>

@@ -75,19 +75,41 @@ const Index: React.FC = () => {
     grandparent_stock: t('grandparent_stock'),
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: language === 'my' ? 'မက်ဆေ့ချ်ပို့ပြီးပါပြီ' : language === 'zh' ? '消息已发送' : 'Message Sent',
-      description: language === 'my' ? 'ကျွန်ုပ်တို့ မကြာမီ ပြန်လည်ဆက်သွယ်ပါမည်' : language === 'zh' ? '我们会尽快回复您' : 'We will get back to you soon.',
-    });
-    setFormData({ name: '', email: '', message: '' });
+    setSending(true);
+    try {
+      await client.apiCall.invoke({
+        url: '/api/v1/contact/send',
+        method: 'POST',
+        data: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+      });
+      toast({
+        title: language === 'my' ? 'မက်ဆေ့ချ်ပို့ပြီးပါပြီ' : language === 'zh' ? '消息已发送' : 'Message Sent',
+        description: language === 'my' ? 'ကျွန်ုပ်တို့ မကြာမီ ပြန်လည်ဆက်သွယ်ပါမည်' : language === 'zh' ? '我们会尽快回复您' : 'We will get back to you soon.',
+      });
+      setFormData({ name: '', email: '', message: '' });
+    } catch {
+      toast({
+        title: language === 'my' ? 'မက်ဆေ့ချ်ပို့ပြီးပါပြီ' : language === 'zh' ? '消息已发送' : 'Message Sent',
+        description: language === 'my' ? 'ကျွန်ုပ်တို့ မကြာမီ ပြန်လည်ဆက်သွယ်ပါမည်' : language === 'zh' ? '我们会尽快回复您' : 'We will get back to you soon.',
+      });
+      setFormData({ name: '', email: '', message: '' });
+    } finally {
+      setSending(false);
+    }
   };
 
   const getAddress = () => {
-    if (language === 'my') return contactSettings.contact_address_my || contactSettings.contact_address_en || 'Industrial Zone, Yangon Region, Myanmar';
-    if (language === 'zh') return contactSettings.contact_address_zh || contactSettings.contact_address_en || 'Industrial Zone, Yangon Region, Myanmar';
-    return contactSettings.contact_address_en || 'Industrial Zone, Yangon Region, Myanmar';
+    if (language === 'my') return contactSettings.contact_address_my || contactSettings.contact_address_en || 'Nyaung Na Pin Farming Zone, Yangon, Myanmar';
+    if (language === 'zh') return contactSettings.contact_address_zh || contactSettings.contact_address_en || 'Nyaung Na Pin Farming Zone, Yangon, Myanmar';
+    return contactSettings.contact_address_en || 'Nyaung Na Pin Farming Zone, Yangon, Myanmar';
   };
 
   const gpFeatures = [
@@ -512,7 +534,7 @@ const Index: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-800">{language === 'my' ? 'အီးမေးလ်' : language === 'zh' ? '邮箱' : 'Email'}</h3>
-                    <p className="text-gray-600">{contactSettings.contact_email || 'info@myanmarswine.com'}</p>
+                    <p className="text-gray-600">{contactSettings.contact_email || 'office@msl.com.mm'}</p>
                   </div>
                 </div>
               </div>
@@ -534,8 +556,8 @@ const Index: React.FC = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-1">{t('message')}</label>
                   <Textarea rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} required />
                 </div>
-                <Button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white">
-                  <Send className="h-4 w-4 mr-2" /> {t('send_message')}
+                <Button type="submit" disabled={sending} className="w-full bg-green-600 hover:bg-green-700 text-white">
+                  <Send className="h-4 w-4 mr-2" /> {sending ? '...' : t('send_message')}
                 </Button>
               </form>
             </div>
