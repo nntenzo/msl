@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myanmar Swine Livestock Co., Ltd. | First GP Breeder in Myanmar</title>
+    <meta name="description" content="Myanmar's first Grandparent Stock (GP) breeder producing 38,000+ commercial pigs yearly with zero-grid green energy operations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1f2937; line-height: 1.6; }
+        
+        /* Header */
+        .header { position: sticky; top: 0; z-index: 50; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .header-inner { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; background: #16a34a; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.75rem; }
+        .logo-text { font-weight: 700; color: #166534; font-size: 0.875rem; line-height: 1.2; }
+        .logo-sub { font-size: 0.75rem; color: #6b7280; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
+        nav a { text-decoration: none; font-size: 0.875rem; font-weight: 500; color: #374151; transition: color 0.2s; }
+        nav a:hover { color: #16a34a; }
+        .lang-switcher { display: flex; gap: 0.25rem; margin-left: 1rem; }
+        .lang-btn { padding: 0.25rem 0.5rem; border: 1px solid #d1d5db; border-radius: 4px; background: #fff; cursor: pointer; font-size: 0.75rem; transition: all 0.2s; }
+        .lang-btn.active { background: #16a34a; color: #fff; border-color: #16a34a; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 1.5rem; }
+
+        /* Hero */
+        .hero { position: relative; height: 600px; overflow: hidden; }
+        .hero img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(20,83,45,0.85), rgba(22,101,52,0.4)); }
+        .hero-content { position: absolute; inset: 0; display: flex; align-items: center; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+        .hero-text { max-width: 600px; color: #fff; }
+        .hero-text h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
+        .hero-text p { font-size: 1.125rem; color: #bbf7d0; margin-bottom: 2rem; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; }
+        .btn-primary { background: #16a34a; color: #fff; }
+        .btn-primary:hover { background: #15803d; }
+        .btn-outline { background: transparent; color: #fff; border: 2px solid #fff; }
+        .btn-outline:hover { border-color: #86efac; color: #86efac; }
+
+        /* Stats Bar */
+        .stats-bar { background: #166534; padding: 1.5rem 0; }
+        .stats-grid { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: center; color: #fff; }
+        .stat-number { font-size: 1.875rem; font-weight: 700; }
+        .stat-label { font-size: 0.875rem; color: #bbf7d0; }
+
+        /* Sections */
+        .section { padding: 4rem 0; }
+        .section-alt { background: #f9fafb; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+        .section-title { font-size: 1.875rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: #1f2937; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+
+        /* Mission */
+        .mission-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .feature-item { display: flex; gap: 0.75rem; align-items: flex-start; }
+        .feature-icon { width: 24px; height: 24px; color: #16a34a; flex-shrink: 0; margin-top: 2px; }
+        .feature-title { font-weight: 600; color: #1f2937; font-size: 0.875rem; }
+        .feature-desc { font-size: 0.75rem; color: #6b7280; }
+        .rounded-img { border-radius: 1rem; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+        .rounded-img img { width: 100%; height: 320px; object-fit: cover; }
+
+        /* Prices */
+        .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .price-card { border: 1px solid #bbf7d0; border-radius: 1rem; padding: 1.5rem; background: linear-gradient(to bottom, #fff, #f0fdf4); transition: box-shadow 0.2s; }
+        .price-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .price-card h3 { font-size: 1.125rem; font-weight: 600; color: #166534; margin-bottom: 1rem; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+        .price-label { font-size: 0.875rem; color: #6b7280; }
+        .price-value { font-size: 1.25rem; font-weight: 700; color: #15803d; }
+        .price-note { font-size: 0.75rem; color: #6b7280; border-top: 1px solid #e5e7eb; padding-top: 0.75rem; margin-top: 0.75rem; }
+
+        /* Products */
+        .product-block { margin-bottom: 4rem; }
+        .product-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem; }
+        .badge-green { background: #dcfce7; color: #166534; }
+        .badge-amber { background: #fef3c7; color: #92400e; }
+        .product-features { list-style: none; }
+        .product-features li { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.875rem; color: #374151; }
+        .check-icon { color: #16a34a; flex-shrink: 0; margin-top: 2px; }
+        .product-visual { background: linear-gradient(135deg, #dcfce7, #d1fae5); border-radius: 1rem; padding: 2rem; text-align: center; }
+        .product-visual .emoji { font-size: 4rem; margin-bottom: 1rem; }
+        .product-visual h3 { font-size: 1.25rem; font-weight: 700; color: #166534; }
+        .product-visual p { color: #6b7280; margin-top: 0.5rem; }
+
+        /* Green Energy */
+        .energy-section { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); padding: 4rem 0; }
+        .energy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .energy-card { background: #fff; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .energy-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; }
+        .energy-icon-green { background: #dcfce7; }
+        .energy-icon-yellow { background: #fef9c3; }
+        .energy-icon-blue { background: #dbeafe; }
+        .energy-value { font-size: 2rem; font-weight: 800; color: #166534; }
+        .energy-label { font-size: 0.875rem; color: #6b7280; margin-top: 0.25rem; }
+        .counter { display: inline-block; }
+
+        /* Sustainability */
+        .sustain-block { margin-bottom: 3rem; }
+        .sustain-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .sustain-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+        .sustain-icon-yellow { background: #fef9c3; }
+        .sustain-icon-orange { background: #ffedd5; }
+        .sustain-icon-teal { background: #ccfbf1; }
+        .sustain-icon-green { background: #dcfce7; }
+        .biogas-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .biogas-stat { background: #fff; border-radius: 0.5rem; padding: 1rem; text-align: center; }
+        .biogas-stat .value { font-size: 1.5rem; font-weight: 700; }
+        .biogas-stat .label { font-size: 0.75rem; color: #6b7280; }
+
+        /* Knowledge */
+        .article-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .article-card { background: #fff; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: box-shadow 0.2s; }
+        .article-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .article-badge { display: inline-block; padding: 0.125rem 0.5rem; border-radius: 999px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem; }
+        .badge-nutrition { background: #ffedd5; color: #9a3412; }
+        .badge-breeding { background: #fce7f3; color: #9d174d; }
+        .badge-health { background: #fee2e2; color: #991b1b; }
+        .badge-management { background: #dbeafe; color: #1e40af; }
+        .article-card h3 { font-size: 1.125rem; font-weight: 700; color: #1f2937; margin-bottom: 0.75rem; }
+        .article-card p { font-size: 0.875rem; color: #6b7280; line-height: 1.5; }
+
+        /* Contact */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+        .contact-icon { width: 48px; height: 48px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #16a34a; }
+        .contact-label { font-weight: 600; color: #1f2937; }
+        .contact-value { color: #6b7280; font-size: 0.875rem; }
+        .contact-form { background: #f9fafb; border-radius: 1rem; padding: 2rem; }
+        .contact-form h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; font-size: 0.875rem; font-weight: 500; color: #374151; margin-bottom: 0.25rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem; font-size: 0.875rem; font-family: inherit; transition: border-color 0.2s; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.1); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .btn-submit { width: 100%; padding: 0.75rem; background: #16a34a; color: #fff; border: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.875rem; cursor: pointer; transition: background 0.2s; }
+        .btn-submit:hover { background: #15803d; }
+
+        /* Footer */
+        .footer { background: #14532d; color: #fff; padding: 3rem 0; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+        .footer-logo { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+        .footer-logo-icon { width: 40px; height: 40px; background: #16a34a; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; }
+        .footer h3 { font-weight: 600; margin-bottom: 1rem; }
+        .footer a { color: #bbf7d0; text-decoration: none; font-size: 0.875rem; display: block; margin-bottom: 0.5rem; transition: color 0.2s; }
+        .footer a:hover { color: #fff; }
+        .footer-bottom { border-top: 1px solid #166534; margin-top: 2rem; padding-top: 2rem; text-align: center; color: #86efac; font-size: 0.875rem; }
+
+        /* Scroll to top */
+        .scroll-top { position: fixed; bottom: 2rem; right: 2rem; width: 48px; height: 48px; background: #16a34a; color: #fff; border: none; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer; font-size: 1.25rem; display: none; align-items: center; justify-content: center; transition: background 0.2s; z-index: 50; }
+        .scroll-top:hover { background: #15803d; }
+        .scroll-top.visible { display: flex; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero-text h1 { font-size: 1.75rem; }
+            .hero { height: 450px; }
+            .stats-grid, .price-grid, .energy-grid, .article-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .mission-features { grid-template-columns: 1fr; }
+            .biogas-stats { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate { animation: fadeInUp 0.6s ease-out forwards; opacity: 0; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="#home" class="logo">
+                <div class="logo-icon">MSL</div>
+                <div>
+                    <div class="logo-text">Myanmar Swine</div>
+                    <div class="logo-sub">Livestock Co., Ltd.</div>
+                </div>
+            </a>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#sustainability">Sustainability</a>
+                <a href="#knowledge">Knowledge</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+                <button class="lang-btn" onclick="switchLang('my')">MY</button>
+                <button class="lang-btn" onclick="switchLang('zh')">中</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobile()">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hhelqaahua/hero-banner-modern-pig-farm.png" alt="Myanmar Swine Livestock Farm">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>First in Myanmar GP Breeder</h1>
+                <p>Leading the way in sustainable swine genetics, providing high-quality protein for Myanmar's growing population through world-class breeding programs.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#products" class="btn btn-primary">Our Products →</a>
+                    <a href="#sustainability" class="btn btn-outline">Sustainability</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-grid">
+            <div>
+                <div class="stat-number">38,000+</div>
+                <div class="stat-label">Annual Production (pigs/year)</div>
+            </div>
+            <div>
+                <div class="stat-number">First in Myanmar</div>
+                <div class="stat-label">GP Breeder</div>
+            </div>
+            <div>
+                <div class="stat-number">Near Zero Grid</div>
+                <div class="stat-label">Power Dependency</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Mission -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2 style="font-size: 1.875rem; font-weight: 700; color: #1f2937; margin-bottom: 1.5rem;">Our Mission</h2>
+                    <p style="color: #4b5563; margin-bottom: 1.5rem;">Myanmar Swine Livestock Co., Ltd. is committed to advancing Myanmar's swine industry through world-class genetics, sustainable farming practices, and cutting-edge biosecurity measures. We believe in providing safe, high-quality protein while protecting our environment for future generations.</p>
+                    <div class="mission-features">
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            <div>
+                                <div class="feature-title">Food Security & Safety</div>
+                                <div class="feature-desc">Protein for People</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                            <div>
+                                <div class="feature-title">Sustainability</div>
+                                <div class="feature-desc">Near Zero Grid</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                            <div>
+                                <div class="feature-title">First in Myanmar</div>
+                                <div class="feature-desc">GP Breeder</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-img">
+                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hgckiaahuq/products-commercial-pigs.png" alt="Commercial Pigs">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pig Prices -->
+    <section id="prices" class="section section-alt">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 class="section-title" style="margin-bottom: 0.5rem;">📈 Current Prices</h2>
+                <p style="color: #6b7280; font-size: 0.875rem;">Updated regularly</p>
+            </div>
+            <div class="price-grid">
+                <div class="price-card">
+                    <h3>Commercial Pigs</h3>
+                    <div class="price-row">
+                        <span class="price-label">Price per kg</span>
+                        <span class="price-value">4,500 MMK</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Price per head</span>
+                        <span style="font-size: 1rem; font-weight: 600; color: #374151;">450,000 MMK</span>
+                    </div>
+                    <div class="price-note">Market-ready, 90-110kg live weight</div>
+                </div>
+                <div class="price-card">
+                    <h3>Parent Stock</h3>
+                    <div class="price-row">
+                        <span class="price-label">Price per kg</span>
+                        <span class="price-value">8,000 MMK</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Price per head</span>
+                        <span style="font-size: 1rem; font-weight: 600; color: #374151;">1,200,000 MMK</span>
+                    </div>
+                    <div class="price-note">Breeding-ready gilts and boars</div>
+                </div>
+                <div class="price-card">
+                    <h3>Grandparent Stock</h3>
+                    <div class="price-row">
+                        <span class="price-label">Price per kg</span>
+                        <span class="price-value">15,000 MMK</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Price per head</span>
+                        <span style="font-size: 1rem; font-weight: 600; color: #374151;">2,500,000 MMK</span>
+                    </div>
+                    <div class="price-note">Elite genetics, limited availability</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+
+            <!-- GP -->
+            <div class="product-block">
+                <div class="grid-2">
+                    <div>
+                        <span class="product-badge badge-green">First in Myanmar</span>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Grandparent Stock (GP)</h3>
+                        <p style="color: #4b5563; margin-bottom: 1.5rem;">As Myanmar's first and only GP breeder, we maintain the highest genetic lines imported from world-renowned breeding companies.</p>
+                        <ul class="product-features">
+                            <li><span class="check-icon">✓</span> Superior growth rates and feed efficiency</li>
+                            <li><span class="check-icon">✓</span> Excellent reproductive performance</li>
+                            <li><span class="check-icon">✓</span> Disease resistance and robustness</li>
+                            <li><span class="check-icon">✓</span> Optimal carcass quality</li>
+                        </ul>
+                    </div>
+                    <div class="product-visual">
+                        <div class="emoji">🧬</div>
+                        <h3>Elite Genetics</h3>
+                        <p>World-class breeding lines for Myanmar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PS -->
+            <div class="product-block">
+                <div class="grid-2">
+                    <div class="product-visual" style="background: linear-gradient(135deg, #eff6ff, #f0fdf4);">
+                        <div class="emoji">🐷</div>
+                        <h3>Multiplication Program</h3>
+                        <p>Elevating national herd genetics</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Parent Stock (PS)</h3>
+                        <p style="color: #4b5563; margin-bottom: 1.5rem;">Our Parent Stock program multiplies the superior genetics from our GP herd to produce high-performing breeding animals for farms across Myanmar.</p>
+                        <ul class="product-features">
+                            <li><span class="check-icon" style="color: #2563eb;">✓</span> High litter sizes (12-14 piglets born alive)</li>
+                            <li><span class="check-icon" style="color: #2563eb;">✓</span> Excellent mothering ability</li>
+                            <li><span class="check-icon" style="color: #2563eb;">✓</span> Strong milking capacity</li>
+                            <li><span class="check-icon" style="color: #2563eb;">✓</span> Consistent performance across environments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial -->
+            <div class="product-block">
+                <div class="grid-2">
+                    <div>
+                        <span class="product-badge badge-amber">~38,000 pigs/year</span>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Commercial Pigs</h3>
+                        <p style="color: #4b5563; margin-bottom: 1.5rem;">Our commercial pigs are the result of carefully planned crossbreeding programs that maximize hybrid vigor for optimal market performance.</p>
+                        <ul class="product-features">
+                            <li><span class="check-icon" style="color: #d97706;">✓</span> Fast growth (market weight in 150-170 days)</li>
+                            <li><span class="check-icon" style="color: #d97706;">✓</span> Excellent feed conversion (2.5-2.8 FCR)</li>
+                            <li><span class="check-icon" style="color: #d97706;">✓</span> Lean, high-quality carcasses</li>
+                            <li><span class="check-icon" style="color: #d97706;">✓</span> Full traceability from birth to market</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-img">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hgckiaahuq/products-commercial-pigs.png" alt="Commercial Pigs">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Green Energy -->
+    <section id="sustainability" class="energy-section">
+        <div class="container">
+            <h2 class="section-title">🌱 Green Energy Impact</h2>
+            <div class="energy-grid">
+                <div class="energy-card">
+                    <div class="energy-icon energy-icon-green">☀️</div>
+                    <div class="energy-value"><span class="counter" data-target="2000">0</span></div>
+                    <div class="energy-label">kWh/day Solar + Biogas</div>
+                </div>
+                <div class="energy-card">
+                    <div class="energy-icon energy-icon-yellow">🌍</div>
+                    <div class="energy-value"><span class="counter" data-target="511">0</span></div>
+                    <div class="energy-label">tonnes CO₂ Reduced/Year</div>
+                </div>
+                <div class="energy-card">
+                    <div class="energy-icon energy-icon-blue">🌳</div>
+                    <div class="energy-value"><span class="counter" data-target="23227">0</span></div>
+                    <div class="energy-label">Trees Equivalent Saved</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Details -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Sustainability</h2>
+
+            <!-- Solar -->
+            <div class="sustain-block">
+                <div class="grid-2">
+                    <div>
+                        <div class="sustain-header">
+                            <div class="sustain-icon sustain-icon-yellow">☀️</div>
+                            <h3 style="font-size: 1.5rem; font-weight: 700;">Solar Energy System</h3>
+                        </div>
+                        <p style="color: #4b5563;">Our farm operates a comprehensive solar panel installation that generates clean electricity for daily operations, reducing our carbon footprint and demonstrating that modern livestock farming can be environmentally responsible.</p>
+                    </div>
+                    <div class="rounded-img">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hewhqaahwq/sustainability-solar-biogas.png" alt="Solar Panels">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biogas -->
+            <div class="sustain-block">
+                <div class="grid-2">
+                    <div style="background: linear-gradient(135deg, #fff7ed, #fef9c3); border-radius: 1rem; padding: 2rem; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🔥</div>
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Biogas Generation</h3>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">Converting waste into clean energy</p>
+                        <div class="biogas-stats">
+                            <div class="biogas-stat">
+                                <div class="value" style="color: #ea580c;">24/7</div>
+                                <div class="label">Power Supply</div>
+                            </div>
+                            <div class="biogas-stat">
+                                <div class="value" style="color: #16a34a;">0%</div>
+                                <div class="label">Waste to Landfill</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sustain-header">
+                            <div class="sustain-icon sustain-icon-orange">🔥</div>
+                            <h3 style="font-size: 1.5rem; font-weight: 700;">Biogas Generation</h3>
+                        </div>
+                        <p style="color: #4b5563;">We convert pig waste into valuable biogas through anaerobic digestion, creating a circular economy on our farm. This process eliminates waste while generating renewable energy for heating and electricity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biosecurity -->
+            <div class="sustain-block">
+                <div class="grid-2">
+                    <div>
+                        <div class="sustain-header">
+                            <div class="sustain-icon sustain-icon-green">🛡️</div>
+                            <h3 style="font-size: 1.5rem; font-weight: 700;">Biosecurity Excellence</h3>
+                        </div>
+                        <p style="color: #4b5563;">Biosecurity is the cornerstone of our operations. We implement multi-layered protection including controlled access zones, vehicle disinfection stations, shower-in/shower-out protocols, and comprehensive health monitoring to keep our herd disease-free.</p>
+                    </div>
+                    <div class="rounded-img">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3he26iaahvq/biosecurity-entrance-station.png" alt="Biosecurity">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Hub -->
+    <section id="knowledge" class="section section-alt">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📚</div>
+                <h2 class="section-title" style="margin-bottom: 0.5rem;">Knowledge Hub</h2>
+                <p style="color: #6b7280;">Swine livestock knowledge and best practices</p>
+            </div>
+            <div class="article-grid">
+                <div class="article-card">
+                    <span class="article-badge badge-nutrition">nutrition</span>
+                    <h3>Optimal Nutrition for Swine Growth</h3>
+                    <p>Understanding the nutritional requirements at different growth stages is crucial for maximizing feed efficiency and achieving optimal market weights. Learn about protein requirements, energy sources, and mineral supplementation.</p>
+                </div>
+                <div class="article-card">
+                    <span class="article-badge badge-breeding">breeding</span>
+                    <h3>Modern Breeding Techniques</h3>
+                    <p>Explore advanced breeding strategies including genomic selection, crossbreeding programs, and reproductive management techniques that maximize genetic progress and herd productivity.</p>
+                </div>
+                <div class="article-card">
+                    <span class="article-badge badge-health">health</span>
+                    <h3>Disease Prevention & Biosecurity</h3>
+                    <p>Comprehensive guide to preventing common swine diseases through vaccination programs, biosecurity protocols, and early detection systems that protect your investment.</p>
+                </div>
+                <div class="article-card">
+                    <span class="article-badge badge-management">management</span>
+                    <h3>Farm Management Best Practices</h3>
+                    <p>Effective farm management strategies covering housing design, ventilation systems, waste management, and record-keeping for profitable and sustainable swine operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <div class="contact-label">Address</div>
+                            <div class="contact-value">Industrial Zone, Yangon Region, Myanmar</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value">+95 9 123 456 789</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">info@myanmarswine.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email</label>
+                            <input type="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea required placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">✉️ Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">MSL</div>
+                        <span style="font-weight: 700; font-size: 1.125rem;">Myanmar Swine Livestock</span>
+                    </div>
+                    <p style="color: #bbf7d0; font-size: 0.875rem;">First in Myanmar GP Breeder</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#sustainability">Sustainability</a>
+                    <a href="#knowledge">Knowledge</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p style="color: #bbf7d0; font-size: 0.875rem; margin-bottom: 0.5rem;">+95 9 123 456 789</p>
+                    <p style="color: #bbf7d0; font-size: 0.875rem; margin-bottom: 0.5rem;">info@myanmarswine.com</p>
+                    <p style="color: #bbf7d0; font-size: 0.875rem;">Industrial Zone, Yangon Region, Myanmar</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Myanmar Swine Livestock Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Scroll to top button
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollTop');
+            if (window.scrollY > 600) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const start = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    counter.textContent = Math.floor(target * eased).toLocaleString();
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        // Intersection Observer for counter animation
+        const energySection = document.querySelector('.energy-section');
+        let countersAnimated = false;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersAnimated) {
+                    countersAnimated = true;
+                    animateCounters();
+                }
+            });
+        }, { threshold: 0.3 });
+        if (energySection) observer.observe(energySection);
+
+        // Animate elements on scroll
+        const animateElements = document.querySelectorAll('.animate');
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+        animateElements.forEach(el => scrollObserver.observe(el));
+
+        // Language switcher (static - just visual feedback)
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            // In a static page, language switching would require separate HTML files
+            // This is just visual feedback
+            alert('Language switching requires separate HTML pages for each language in a static site. Currently showing English version.');
+        }
+
+        // Contact form
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            e.target.reset();
+        }
+
+        // Mobile menu toggle
+        function toggleMobile() {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+            nav.style.position = 'absolute';
+            nav.style.top = '64px';
+            nav.style.left = '0';
+            nav.style.right = '0';
+            nav.style.background = '#fff';
+            nav.style.flexDirection = 'column';
+            nav.style.padding = '1rem';
+            nav.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+        }
+    </script>
+</body>
+</html>
