@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myanmar Swine Livestock Co., Ltd. | First GP Breeder in Myanmar</title>
+    <meta name="description" content="Myanmar's first Grandparent Stock (GP) breeder producing 38,000+ commercial pigs yearly with zero-grid green energy operations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: #1f2937; line-height: 1.6; }
+        
+        /* Header */
+        .header { position: sticky; top: 0; z-index: 50; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .header-inner { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+        .logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; }
+        .logo-icon { width: 40px; height: 40px; background: #16a34a; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 0.75rem; }
+        .logo-text { font-weight: 700; color: #166534; font-size: 0.875rem; line-height: 1.2; }
+        .logo-sub { font-size: 0.75rem; color: #6b7280; }
+        nav { display: flex; align-items: center; gap: 1.5rem; }
+        nav a { text-decoration: none; font-size: 0.875rem; font-weight: 500; color: #374151; transition: color 0.2s; }
+        nav a:hover { color: #16a34a; }
+        .lang-switcher { display: flex; gap: 0.25rem; margin-left: 1rem; }
+        .lang-btn { padding: 0.25rem 0.5rem; border: 1px solid #d1d5db; border-radius: 4px; background: #fff; cursor: pointer; font-size: 0.75rem; transition: all 0.2s; }
+        .lang-btn.active { background: #16a34a; color: #fff; border-color: #16a34a; }
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; font-size: 1.5rem; }
+
+        /* Hero */
+        .hero { position: relative; height: 600px; overflow: hidden; }
+        .hero img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(20,83,45,0.85), rgba(22,101,52,0.4)); }
+        .hero-content { position: absolute; inset: 0; display: flex; align-items: center; max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+        .hero-text { max-width: 600px; color: #fff; }
+        .hero-text h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2; }
+        .hero-text p { font-size: 1.125rem; color: #bbf7d0; margin-bottom: 2rem; }
+        .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.875rem; text-decoration: none; transition: all 0.2s; border: none; cursor: pointer; }
+        .btn-primary { background: #16a34a; color: #fff; }
+        .btn-primary:hover { background: #15803d; }
+        .btn-outline { background: transparent; color: #fff; border: 2px solid #fff; }
+        .btn-outline:hover { border-color: #86efac; color: #86efac; }
+
+        /* Stats Bar */
+        .stats-bar { background: #166534; padding: 1.5rem 0; }
+        .stats-grid { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: center; color: #fff; }
+        .stat-number { font-size: 1.875rem; font-weight: 700; }
+        .stat-label { font-size: 0.875rem; color: #bbf7d0; }
+
+        /* Sections */
+        .section { padding: 4rem 0; }
+        .section-alt { background: #f9fafb; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+        .section-title { font-size: 1.875rem; font-weight: 700; text-align: center; margin-bottom: 3rem; color: #1f2937; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+
+        /* Mission */
+        .mission-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .feature-item { display: flex; gap: 0.75rem; align-items: flex-start; }
+        .feature-icon { width: 24px; height: 24px; color: #16a34a; flex-shrink: 0; margin-top: 2px; }
+        .feature-title { font-weight: 600; color: #1f2937; font-size: 0.875rem; }
+        .feature-desc { font-size: 0.75rem; color: #6b7280; }
+        .rounded-img { border-radius: 1rem; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+        .rounded-img img { width: 100%; height: 320px; object-fit: cover; }
+
+        /* Prices */
+        .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .price-card { border: 1px solid #bbf7d0; border-radius: 1rem; padding: 1.5rem; background: linear-gradient(to bottom, #fff, #f0fdf4); transition: box-shadow 0.2s; }
+        .price-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .price-card h3 { font-size: 1.125rem; font-weight: 600; color: #166534; margin-bottom: 1rem; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+        .price-label { font-size: 0.875rem; color: #6b7280; }
+        .price-value { font-size: 1.25rem; font-weight: 700; color: #15803d; }
+        .price-note { font-size: 0.75rem; color: #6b7280; border-top: 1px solid #e5e7eb; padding-top: 0.75rem; margin-top: 0.75rem; }
+
+        /* Products */
+        .product-block { margin-bottom: 4rem; }
+        .product-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem; }
+        .badge-green { background: #dcfce7; color: #166534; }
+        .badge-amber { background: #fef3c7; color: #92400e; }
+        .product-features { list-style: none; }
+        .product-features li { display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 0.75rem; font-size: 0.875rem; color: #374151; }
+        .check-icon { color: #16a34a; flex-shrink: 0; margin-top: 2px; }
+        .product-visual { background: linear-gradient(135deg, #dcfce7, #d1fae5); border-radius: 1rem; padding: 2rem; text-align: center; }
+        .product-visual .emoji { font-size: 4rem; margin-bottom: 1rem; }
+        .product-visual h3 { font-size: 1.25rem; font-weight: 700; color: #166534; }
+        .product-visual p { color: #6b7280; margin-top: 0.5rem; }
+
+        /* Green Energy */
+        .energy-section { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); padding: 4rem 0; }
+        .energy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .energy-card { background: #fff; border-radius: 1rem; padding: 2rem; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .energy-icon { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-size: 1.5rem; }
+        .energy-icon-green { background: #dcfce7; }
+        .energy-icon-yellow { background: #fef9c3; }
+        .energy-icon-blue { background: #dbeafe; }
+        .energy-value { font-size: 2rem; font-weight: 800; color: #166534; }
+        .energy-label { font-size: 0.875rem; color: #6b7280; margin-top: 0.25rem; }
+        .counter { display: inline-block; }
+
+        /* Sustainability */
+        .sustain-block { margin-bottom: 3rem; }
+        .sustain-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .sustain-icon { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+        .sustain-icon-yellow { background: #fef9c3; }
+        .sustain-icon-orange { background: #ffedd5; }
+        .sustain-icon-teal { background: #ccfbf1; }
+        .sustain-icon-green { background: #dcfce7; }
+        .biogas-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
+        .biogas-stat { background: #fff; border-radius: 0.5rem; padding: 1rem; text-align: center; }
+        .biogas-stat .value { font-size: 1.5rem; font-weight: 700; }
+        .biogas-stat .label { font-size: 0.75rem; color: #6b7280; }
+
+        /* Knowledge */
+        .article-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .article-card { background: #fff; border-radius: 1rem; padding: 1.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: box-shadow 0.2s; }
+        .article-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .article-badge { display: inline-block; padding: 0.125rem 0.5rem; border-radius: 999px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem; }
+        .badge-nutrition { background: #ffedd5; color: #9a3412; }
+        .badge-breeding { background: #fce7f3; color: #9d174d; }
+        .badge-health { background: #fee2e2; color: #991b1b; }
+        .badge-management { background: #dbeafe; color: #1e40af; }
+        .article-card h3 { font-size: 1.125rem; font-weight: 700; color: #1f2937; margin-bottom: 0.75rem; }
+        .article-card p { font-size: 0.875rem; color: #6b7280; line-height: 1.5; }
+
+        /* Contact */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-item { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+        .contact-icon { width: 48px; height: 48px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: #16a34a; }
+        .contact-label { font-weight: 600; color: #1f2937; }
+        .contact-value { color: #6b7280; font-size: 0.875rem; }
+        .contact-form { background: #f9fafb; border-radius: 1rem; padding: 2rem; }
+        .contact-form h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; font-size: 0.875rem; font-weight: 500; color: #374151; margin-bottom: 0.25rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem; font-size: 0.875rem; font-family: inherit; transition: border-color 0.2s; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.1); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .btn-submit { width: 100%; padding: 0.75rem; background: #16a34a; color: #fff; border: none; border-radius: 0.5rem; font-weight: 600; font-size: 0.875rem; cursor: pointer; transition: background 0.2s; }
+        .btn-submit:hover { background: #15803d; }
+
+        /* Footer */
+        .footer { background: #14532d; color: #fff; padding: 3rem 0; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; }
+        .footer-logo { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+        .footer-logo-icon { width: 40px; height: 40px; background: #16a34a; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.75rem; }
+        .footer h3 { font-weight: 600; margin-bottom: 1rem; }
+        .footer a { color: #bbf7d0; text-decoration: none; font-size: 0.875rem; display: block; margin-bottom: 0.5rem; transition: color 0.2s; }
+        .footer a:hover { color: #fff; }
+        .footer-bottom { border-top: 1px solid #166534; margin-top: 2rem; padding-top: 2rem; text-align: center; color: #86efac; font-size: 0.875rem; }
+
+        /* Scroll to top */
+        .scroll-top { position: fixed; bottom: 2rem; right: 2rem; width: 48px; height: 48px; background: #16a34a; color: #fff; border: none; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.2); cursor: pointer; font-size: 1.25rem; display: none; align-items: center; justify-content: center; transition: background 0.2s; z-index: 50; }
+        .scroll-top:hover { background: #15803d; }
+        .scroll-top.visible { display: flex; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero-text h1 { font-size: 1.75rem; }
+            .hero { height: 450px; }
+            .stats-grid, .price-grid, .energy-grid, .article-grid, .contact-grid, .footer-grid { grid-template-columns: 1fr; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .mission-features { grid-template-columns: 1fr; }
+            .biogas-stats { grid-template-columns: 1fr 1fr; }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .animate { animation: fadeInUp 0.6s ease-out forwards; opacity: 0; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="#home" class="logo">
+                <div class="logo-icon">MSL</div>
+                <div>
+                    <div class="logo-text">Myanmar Swine</div>
+                    <div class="logo-sub">Livestock Co., Ltd.</div>
+                </div>
+            </a>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#sustainability">Sustainability</a>
+                <a href="#knowledge">Knowledge</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="lang-switcher">
+                <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+                <button class="lang-btn" onclick="switchLang('my')">MY</button>
+                <button class="lang-btn" onclick="switchLang('zh')">中</button>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobile()">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hhelqaahua/hero-banner-modern-pig-farm.png" alt="Myanmar Swine Livestock Farm">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>First in Myanmar GP Breeder</h1>
+                <p>Leading the way in sustainable swine genetics, providing high-quality protein for Myanmar's growing population through world-class breeding programs.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#products" class="btn btn-primary">Our Products →</a>
+                    <a href="#sustainability" class="btn btn-outline">Sustainability</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-grid">
+            <div>
+                <div class="stat-number">38,000+</div>
+                <div class="stat-label">Annual Production (pigs/year)</div>
+            </div>
+            <div>
+                <div class="stat-number">First in Myanmar</div>
+                <div class="stat-label">GP Breeder</div>
+            </div>
+            <div>
+                <div class="stat-number">Near Zero Grid</div>
+                <div class="stat-label">Power Dependency</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About / Mission -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="grid-2">
+                <div>
+                    <h2 style="font-size: 1.875rem; font-weight: 700; color: #1f2937; margin-bottom: 1.5rem;">Our Mission</h2>
+                    <p style="color: #4b5563; margin-bottom: 1.5rem;">Myanmar Swine Livestock Co., Ltd. is committed to advancing Myanmar's swine industry through world-class genetics, sustainable farming practices, and cutting-edge biosecurity measures. We believe in providing safe, high-quality protein while protecting our environment for future generations.</p>
+                    <div class="mission-features">
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            <div>
+                                <div class="feature-title">Food Security & Safety</div>
+                                <div class="feature-desc">Protein for People</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                            <div>
+                                <div class="feature-title">Sustainability</div>
+                                <div class="feature-desc">Near Zero Grid</div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="feature-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                            <div>
+                                <div class="feature-title">First in Myanmar</div>
+                                <div class="feature-desc">GP Breeder</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-img">
+                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hgckiaahuq/products-commercial-pigs.png" alt="Commercial Pigs">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pig Prices -->
+    <section id="prices" class="section section-alt">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 class="section-title" style="margin-bottom: 0.5rem;">📈 Current Prices</h2>
+                <p style="color: #6b7280; font-size: 0.875rem;">Updated regularly</p>
+            </div>
+            <div class="price-grid">
+                <div class="price-card">
+                    <h3>Commercial Pigs</h3>
+                    <div class="price-row">
+                        <span class="price-label">Price per kg</span>
+                        <span class="price-value">4,500 MMK</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Price per head</span>
+                        <span style="font-size: 1rem; font-weight: 600; color: #374151;">450,000 MMK</span>
+                    </div>
+                    <div class="price-note">Market-ready, 90-110kg live weight</div>
+                </div>
+                <div class="price-card">
+                    <h3>Parent Stock</h3>
+                    <div class="price-row">
+                        <span class="price-label">Price per kg</span>
+                        <span class="price-value">8,000 MMK</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Price per head</span>
+                        <span style="font-size: 1rem; font-weight: 600; color: #374151;">1,200,000 MMK</span>
+                    </div>
+                    <div class="price-note">Breeding-ready gilts and boars</div>
+                </div>
+                <div class="price-card">
+                    <h3>Grandparent Stock</h3>
+                    <div class="price-row">
+                        <span class="price-label">Price per kg</span>
+                        <span class="price-value">15,000 MMK</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-label">Price per head</span>
+                        <span style="font-size: 1rem; font-weight: 600; color: #374151;">2,500,000 MMK</span>
+                    </div>
+                    <div class="price-note">Elite genetics, limited availability</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+
+            <!-- GP -->
+            <div class="product-block">
+                <div class="grid-2">
+                    <div>
+                        <span class="product-badge badge-green">First in Myanmar</span>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Grandparent Stock (GP)</h3>
+                        <p style="color: #4b5563; margin-bottom: 1.5rem;">As Myanmar's first and only GP breeder, we maintain the highest genetic lines imported from world-renowned breeding companies.</p>
+                        <ul class="product-features">
+                            <li><span class="check-icon">✓</span> Superior growth rates and feed efficiency</li>
+                            <li><span class="check-icon">✓</span> Excellent reproductive performance</li>
+                            <li><span class="check-icon">✓</span> Disease resistance and robustness</li>
+                            <li><span class="check-icon">✓</span> Optimal carcass quality</li>
+                        </ul>
+                    </div>
+                    <div class="product-visual">
+                        <div class="emoji">🧬</div>
+                        <h3>Elite Genetics</h3>
+                        <p>World-class breeding lines for Myanmar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PS -->
+            <div class="product-block">
+                <div class="grid-2">
+                    <div class="product-visual" style="background: linear-gradient(135deg, #eff6ff, #f0fdf4);">
+                        <div class="emoji">🐷</div>
+                        <h3>Multiplication Program</h3>
+                        <p>Elevating national herd genetics</p>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Parent Stock (PS)</h3>
+                        <p style="color: #4b5563; margin-bottom: 1.5rem;">Our Parent Stock program multiplies the superior genetics from our GP herd to produce high-performing breeding animals for farms across Myanmar.</p>
+                        <ul class="product-features">
+                            <li><span class="check-icon" style="color: #2563eb;">✓</span> High litter sizes (12-14 piglets born alive)</li>
+                            <li><span class="check-icon" style="color: #2563eb;">✓</span> Excellent mothering ability</li>
+                            <li><span class="check-icon" style="color: #2563eb;">✓</span> Strong milking capacity</li>
+                            <li><span class="check-icon" style="color: #2563eb;">✓</span> Consistent performance across environments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial -->
+            <div class="product-block">
+                <div class="grid-2">
+                    <div>
+                        <span class="product-badge badge-amber">~38,000 pigs/year</span>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Commercial Pigs</h3>
+                        <p style="color: #4b5563; margin-bottom: 1.5rem;">Our commercial pigs are the result of carefully planned crossbreeding programs that maximize hybrid vigor for optimal market performance.</p>
+                        <ul class="product-features">
+                            <li><span class="check-icon" style="color: #d97706;">✓</span> Fast growth (market weight in 150-170 days)</li>
+                            <li><span class="check-icon" style="color: #d97706;">✓</span> Excellent feed conversion (2.5-2.8 FCR)</li>
+                            <li><span class="check-icon" style="color: #d97706;">✓</span> Lean, high-quality carcasses</li>
+                            <li><span class="check-icon" style="color: #d97706;">✓</span> Full traceability from birth to market</li>
+                        </ul>
+                    </div>
+                    <div class="rounded-img">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hgckiaahuq/products-commercial-pigs.png" alt="Commercial Pigs">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Green Energy -->
+    <section id="sustainability" class="energy-section">
+        <div class="container">
+            <h2 class="section-title">🌱 Green Energy Impact</h2>
+            <div class="energy-grid">
+                <div class="energy-card">
+                    <div class="energy-icon energy-icon-green">☀️</div>
+                    <div class="energy-value"><span class="counter" data-target="2000">0</span></div>
+                    <div class="energy-label">kWh/day Solar + Biogas</div>
+                </div>
+                <div class="energy-card">
+                    <div class="energy-icon energy-icon-yellow">🌍</div>
+                    <div class="energy-value"><span class="counter" data-target="511">0</span></div>
+                    <div class="energy-label">tonnes CO₂ Reduced/Year</div>
+                </div>
+                <div class="energy-card">
+                    <div class="energy-icon energy-icon-blue">🌳</div>
+                    <div class="energy-value"><span class="counter" data-target="23227">0</span></div>
+                    <div class="energy-label">Trees Equivalent Saved</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Details -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Sustainability</h2>
+
+            <!-- Solar -->
+            <div class="sustain-block">
+                <div class="grid-2">
+                    <div>
+                        <div class="sustain-header">
+                            <div class="sustain-icon sustain-icon-yellow">☀️</div>
+                            <h3 style="font-size: 1.5rem; font-weight: 700;">Solar Energy System</h3>
+                        </div>
+                        <p style="color: #4b5563;">Our farm operates a comprehensive solar panel installation that generates clean electricity for daily operations, reducing our carbon footprint and demonstrating that modern livestock farming can be environmentally responsible.</p>
+                    </div>
+                    <div class="rounded-img">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3hewhqaahwq/sustainability-solar-biogas.png" alt="Solar Panels">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biogas -->
+            <div class="sustain-block">
+                <div class="grid-2">
+                    <div style="background: linear-gradient(135deg, #fff7ed, #fef9c3); border-radius: 1rem; padding: 2rem; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🔥</div>
+                        <h3 style="font-size: 1.25rem; font-weight: 700;">Biogas Generation</h3>
+                        <p style="color: #6b7280; margin-top: 0.5rem;">Converting waste into clean energy</p>
+                        <div class="biogas-stats">
+                            <div class="biogas-stat">
+                                <div class="value" style="color: #ea580c;">24/7</div>
+                                <div class="label">Power Supply</div>
+                            </div>
+                            <div class="biogas-stat">
+                                <div class="value" style="color: #16a34a;">0%</div>
+                                <div class="label">Waste to Landfill</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="sustain-header">
+                            <div class="sustain-icon sustain-icon-orange">🔥</div>
+                            <h3 style="font-size: 1.5rem; font-weight: 700;">Biogas Generation</h3>
+                        </div>
+                        <p style="color: #4b5563;">We convert pig waste into valuable biogas through anaerobic digestion, creating a circular economy on our farm. This process eliminates waste while generating renewable energy for heating and electricity.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Biosecurity -->
+            <div class="sustain-block">
+                <div class="grid-2">
+                    <div>
+                        <div class="sustain-header">
+                            <div class="sustain-icon sustain-icon-green">🛡️</div>
+                            <h3 style="font-size: 1.5rem; font-weight: 700;">Biosecurity Excellence</h3>
+                        </div>
+                        <p style="color: #4b5563;">Biosecurity is the cornerstone of our operations. We implement multi-layered protection including controlled access zones, vehicle disinfection stations, shower-in/shower-out protocols, and comprehensive health monitoring to keep our herd disease-free.</p>
+                    </div>
+                    <div class="rounded-img">
+                        <img src="https://mgx-backend-cdn.metadl.com/generate/images/1077780/2026-06-03/p3he26iaahvq/biosecurity-entrance-station.png" alt="Biosecurity">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Knowledge Hub -->
+    <section id="knowledge" class="section section-alt">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📚</div>
+                <h2 class="section-title" style="margin-bottom: 0.5rem;">Knowledge Hub</h2>
+                <p style="color: #6b7280;">Swine livestock knowledge and best practices</p>
+            </div>
+            <div class="article-grid">
+                <div class="article-card">
+                    <span class="article-badge badge-nutrition">nutrition</span>
+                    <h3>Optimal Nutrition for Swine Growth</h3>
+                    <p>Understanding the nutritional requirements at different growth stages is crucial for maximizing feed efficiency and achieving optimal market weights. Learn about protein requirements, energy sources, and mineral supplementation.</p>
+                </div>
+                <div class="article-card">
+                    <span class="article-badge badge-breeding">breeding</span>
+                    <h3>Modern Breeding Techniques</h3>
+                    <p>Explore advanced breeding strategies including genomic selection, crossbreeding programs, and reproductive management techniques that maximize genetic progress and herd productivity.</p>
+                </div>
+                <div class="article-card">
+                    <span class="article-badge badge-health">health</span>
+                    <h3>Disease Prevention & Biosecurity</h3>
+                    <p>Comprehensive guide to preventing common swine diseases through vaccination programs, biosecurity protocols, and early detection systems that protect your investment.</p>
+                </div>
+                <div class="article-card">
+                    <span class="article-badge badge-management">management</span>
+                    <h3>Farm Management Best Practices</h3>
+                    <p>Effective farm management strategies covering housing design, ventilation systems, waste management, and record-keeping for profitable and sustainable swine operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <div class="contact-label">Address</div>
+                            <div class="contact-value">Industrial Zone, Yangon Region, Myanmar</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <div class="contact-label">Phone</div>
+                            <div class="contact-value">+95 9 123 456 789</div>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <div class="contact-label">Email</div>
+                            <div class="contact-value">info@myanmarswine.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Message</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" required placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email</label>
+                            <input type="email" required placeholder="Enter your email">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea required placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">✉️ Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">MSL</div>
+                        <span style="font-weight: 700; font-size: 1.125rem;">Myanmar Swine Livestock</span>
+                    </div>
+                    <p style="color: #bbf7d0; font-size: 0.875rem;">First in Myanmar GP Breeder</p>
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#sustainability">Sustainability</a>
+                    <a href="#knowledge">Knowledge</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <p style="color: #bbf7d0; font-size: 0.875rem; margin-bottom: 0.5rem;">+95 9 123 456 789</p>
+                    <p style="color: #bbf7d0; font-size: 0.875rem; margin-bottom: 0.5rem;">info@myanmarswine.com</p>
+                    <p style="color: #bbf7d0; font-size: 0.875rem;">Industrial Zone, Yangon Region, Myanmar</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Myanmar Swine Livestock Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Scroll to top button
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollTop');
+            if (window.scrollY > 600) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000;
+                const start = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - start;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    counter.textContent = Math.floor(target * eased).toLocaleString();
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        // Intersection Observer for counter animation
+        const energySection = document.querySelector('.energy-section');
+        let countersAnimated = false;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersAnimated) {
+                    countersAnimated = true;
+                    animateCounters();
+                }
+            });
+        }, { threshold: 0.3 });
+        if (energySection) observer.observe(energySection);
+
+        // Animate elements on scroll
+        const animateElements = document.querySelectorAll('.animate');
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.1s';
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, { threshold: 0.1 });
+        animateElements.forEach(el => scrollObserver.observe(el));
+
+        // Language translations
+        const translations = {
+            en: {
+                navHome: 'Home',
+                navProducts: 'Products',
+                navSustainability: 'Sustainability',
+                navKnowledge: 'Knowledge',
+                navContact: 'Contact',
+                heroTitle: 'First in Myanmar GP Breeder',
+                heroDesc: 'Leading the way in sustainable swine genetics, providing high-quality protein for Myanmar\'s growing population through world-class breeding programs.',
+                heroBtn1: 'Our Products →',
+                heroBtn2: 'Sustainability',
+                stat1Num: '38,000+',
+                stat1Label: 'Annual Production (pigs/year)',
+                stat2Num: 'First in Myanmar',
+                stat2Label: 'GP Breeder',
+                stat3Num: 'Near Zero Grid',
+                stat3Label: 'Power Dependency',
+                missionTitle: 'Our Mission',
+                missionDesc: 'Myanmar Swine Livestock Co., Ltd. is committed to advancing Myanmar\'s swine industry through world-class genetics, sustainable farming practices, and cutting-edge biosecurity measures. We believe in providing safe, high-quality protein while protecting our environment for future generations.',
+                feat1Title: 'Food Security & Safety',
+                feat1Desc: 'Protein for People',
+                feat2Title: 'Sustainability',
+                feat2Desc: 'Near Zero Grid',
+                feat3Title: 'First in Myanmar',
+                feat3Desc: 'GP Breeder',
+                pricesTitle: '📈 Current Prices',
+                pricesSubtitle: 'Updated regularly',
+                priceCommercial: 'Commercial Pigs',
+                pricePS: 'Parent Stock',
+                priceGP: 'Grandparent Stock',
+                pricePerKg: 'Price per kg',
+                pricePerHead: 'Price per head',
+                priceNote1: 'Market-ready, 90-110kg live weight',
+                priceNote2: 'Breeding-ready gilts and boars',
+                priceNote3: 'Elite genetics, limited availability',
+                productsTitle: 'Our Products',
+                gpBadge: 'First in Myanmar',
+                gpTitle: 'Grandparent Stock (GP)',
+                gpDesc: 'As Myanmar\'s first and only GP breeder, we maintain the highest genetic lines imported from world-renowned breeding companies.',
+                gpFeat1: 'Superior growth rates and feed efficiency',
+                gpFeat2: 'Excellent reproductive performance',
+                gpFeat3: 'Disease resistance and robustness',
+                gpFeat4: 'Optimal carcass quality',
+                gpVisualTitle: 'Elite Genetics',
+                gpVisualDesc: 'World-class breeding lines for Myanmar',
+                psTitle: 'Parent Stock (PS)',
+                psDesc: 'Our Parent Stock program multiplies the superior genetics from our GP herd to produce high-performing breeding animals for farms across Myanmar.',
+                psFeat1: 'High litter sizes (12-14 piglets born alive)',
+                psFeat2: 'Excellent mothering ability',
+                psFeat3: 'Strong milking capacity',
+                psFeat4: 'Consistent performance across environments',
+                psVisualTitle: 'Multiplication Program',
+                psVisualDesc: 'Elevating national herd genetics',
+                commBadge: '~38,000 pigs/year',
+                commTitle: 'Commercial Pigs',
+                commDesc: 'Our commercial pigs are the result of carefully planned crossbreeding programs that maximize hybrid vigor for optimal market performance.',
+                commFeat1: 'Fast growth (market weight in 150-170 days)',
+                commFeat2: 'Excellent feed conversion (2.5-2.8 FCR)',
+                commFeat3: 'Lean, high-quality carcasses',
+                commFeat4: 'Full traceability from birth to market',
+                energyTitle: '🌱 Green Energy Impact',
+                energyLabel1: 'kWh/day Solar + Biogas',
+                energyLabel2: 'tonnes CO₂ Reduced/Year',
+                energyLabel3: 'Trees Equivalent Saved',
+                sustainTitle: 'Sustainability',
+                solarTitle: 'Solar Energy System',
+                solarDesc: 'Our farm operates a comprehensive solar panel installation that generates clean electricity for daily operations, reducing our carbon footprint and demonstrating that modern livestock farming can be environmentally responsible.',
+                biogasTitle: 'Biogas Generation',
+                biogasDesc: 'We convert pig waste into valuable biogas through anaerobic digestion, creating a circular economy on our farm. This process eliminates waste while generating renewable energy for heating and electricity.',
+                biogasVisualTitle: 'Biogas Generation',
+                biogasVisualDesc: 'Converting waste into clean energy',
+                biogasStat1: 'Power Supply',
+                biogasStat2: 'Waste to Landfill',
+                bioTitle: 'Biosecurity Excellence',
+                bioDesc: 'Biosecurity is the cornerstone of our operations. We implement multi-layered protection including controlled access zones, vehicle disinfection stations, shower-in/shower-out protocols, and comprehensive health monitoring to keep our herd disease-free.',
+                knowledgeTitle: 'Knowledge Hub',
+                knowledgeSubtitle: 'Swine livestock knowledge and best practices',
+                article1Badge: 'nutrition',
+                article1Title: 'Optimal Nutrition for Swine Growth',
+                article1Desc: 'Understanding the nutritional requirements at different growth stages is crucial for maximizing feed efficiency and achieving optimal market weights. Learn about protein requirements, energy sources, and mineral supplementation.',
+                article2Badge: 'breeding',
+                article2Title: 'Modern Breeding Techniques',
+                article2Desc: 'Explore advanced breeding strategies including genomic selection, crossbreeding programs, and reproductive management techniques that maximize genetic progress and herd productivity.',
+                article3Badge: 'health',
+                article3Title: 'Disease Prevention & Biosecurity',
+                article3Desc: 'Comprehensive guide to preventing common swine diseases through vaccination programs, biosecurity protocols, and early detection systems that protect your investment.',
+                article4Badge: 'management',
+                article4Title: 'Farm Management Best Practices',
+                article4Desc: 'Effective farm management strategies covering housing design, ventilation systems, waste management, and record-keeping for profitable and sustainable swine operations.',
+                contactTitle: 'Contact Us',
+                contactAddress: 'Address',
+                contactAddressVal: 'Industrial Zone, Yangon Region, Myanmar',
+                contactPhone: 'Phone',
+                contactPhoneVal: '+95 9 123 456 789',
+                contactEmail: 'Email',
+                contactEmailVal: 'info@myanmarswine.com',
+                contactFormTitle: 'Send Message',
+                contactName: 'Your Name',
+                contactNamePh: 'Enter your name',
+                contactEmailLabel: 'Your Email',
+                contactEmailPh: 'Enter your email',
+                contactMsg: 'Message',
+                contactMsgPh: 'Enter your message',
+                contactBtn: '✉️ Send Message',
+                footerTagline: 'First in Myanmar GP Breeder',
+                footerQuickLinks: 'Quick Links',
+                footerContact: 'Contact',
+                footerCopyright: '© 2024 Myanmar Swine Livestock Co., Ltd. All rights reserved.',
+                formSuccess: 'Thank you for your message! We will get back to you soon.'
+            },
+            my: {
+                navHome: 'ပင်မ',
+                navProducts: 'ထုတ်ကုန်များ',
+                navSustainability: 'ရေရှည်တည်တံ့မှု',
+                navKnowledge: 'ဗဟုသုတ',
+                navContact: 'ဆက်သွယ်ရန်',
+                heroTitle: 'မြန်မာနိုင်ငံ၏ ပထမဆုံး GP မွေးမြူသူ',
+                heroDesc: 'ကမ္ဘာ့အဆင့်မီ မွေးမြူရေးအစီအစဉ်များဖြင့် မြန်မာနိုင်ငံ၏ တိုးပွားလာသော လူဦးရေအတွက် အရည်အသွေးမြင့် ပရိုတင်းကို ပံ့ပိုးပေးလျက် ရေရှည်တည်တံ့သော ဝက်မျိုးရိုးဗီဇတွင် ဦးဆောင်နေပါသည်။',
+                heroBtn1: 'ထုတ်ကုန်များ →',
+                heroBtn2: 'ရေရှည်တည်တံ့မှု',
+                stat1Num: '၃၈,၀၀၀+',
+                stat1Label: 'နှစ်စဉ်ထုတ်လုပ်မှု (ဝက်/နှစ်)',
+                stat2Num: 'မြန်မာနိုင်ငံ ပထမဆုံး',
+                stat2Label: 'GP မွေးမြူသူ',
+                stat3Num: 'လျှပ်စစ်ဓာတ်အား သုံးစွဲမှု နီးပါးသုည',
+                stat3Label: 'ဓာတ်အားမှီခိုမှု',
+                missionTitle: 'ကျွန်ုပ်တို့၏ ရည်မှန်းချက်',
+                missionDesc: 'Myanmar Swine Livestock Co., Ltd. သည် ကမ္ဘာ့အဆင့်မီ မျိုးရိုးဗီဇ၊ ရေရှည်တည်တံ့သော မွေးမြူရေးအလေ့အကျင့်များနှင့် ခေတ်မီ ဇီဝလုံခြုံရေး အစီအမံများဖြင့် မြန်မာနိုင်ငံ၏ ဝက်မွေးမြူရေးလုပ်ငန်းကို တိုးတက်စေရန် ကတိကဝတ်ပြုထားပါသည်။',
+                feat1Title: 'စားနပ်ရိက္ခာ လုံခြုံရေး',
+                feat1Desc: 'လူတို့အတွက် ပရိုတင်း',
+                feat2Title: 'ရေရှည်တည်တံ့မှု',
+                feat2Desc: 'လျှပ်စစ်သုံးစွဲမှု နီးပါးသုည',
+                feat3Title: 'မြန်မာနိုင်ငံ ပထမဆုံး',
+                feat3Desc: 'GP မွေးမြူသူ',
+                pricesTitle: '📈 လက်ရှိ ဈေးနှုန်းများ',
+                pricesSubtitle: 'ပုံမှန် အပ်ဒိတ်လုပ်ထားသည်',
+                priceCommercial: 'ကုန်သွယ်ရေး ဝက်များ',
+                pricePS: 'မိခင်မျိုးဝက်',
+                priceGP: 'အဘိုးအဘွား မျိုးဝက်',
+                pricePerKg: 'တစ်ကီလိုဂရမ် ဈေးနှုန်း',
+                pricePerHead: 'တစ်ကောင် ဈေးနှုန်း',
+                priceNote1: 'ဈေးကွက်အသင့်၊ ၉၀-၁၁၀ ကီလိုဂရမ်',
+                priceNote2: 'မွေးမြူရေးအသင့် မိဝက်နှင့် ထီးဝက်များ',
+                priceNote3: 'ထိပ်တန်း မျိုးရိုးဗီဇ၊ အကန့်အသတ်ရှိ',
+                productsTitle: 'ကျွန်ုပ်တို့၏ ထုတ်ကုန်များ',
+                gpBadge: 'မြန်မာနိုင်ငံ ပထမဆုံး',
+                gpTitle: 'အဘိုးအဘွား မျိုးဝက် (GP)',
+                gpDesc: 'မြန်မာနိုင်ငံ၏ ပထမဆုံးနှင့် တစ်ခုတည်းသော GP မွေးမြူသူအဖြစ် ကမ္ဘာ့ထိပ်တန်း မွေးမြူရေးကုမ္ပဏီများမှ တင်သွင်းထားသော အမြင့်ဆုံး မျိုးရိုးဗီဇလိုင်းများကို ထိန်းသိမ်းထားပါသည်။',
+                gpFeat1: 'ထူးချွန်သော ကြီးထွားနှုန်းနှင့် အစာပြောင်းလဲနိုင်စွမ်း',
+                gpFeat2: 'ကောင်းမွန်သော မျိုးပွားစွမ်းရည်',
+                gpFeat3: 'ရောဂါဒဏ်ခံနိုင်ရည်နှင့် ခိုင်မာမှု',
+                gpFeat4: 'အကောင်းဆုံး အသားအရည်အသွေး',
+                gpVisualTitle: 'ထိပ်တန်း မျိုးရိုးဗီဇ',
+                gpVisualDesc: 'မြန်မာနိုင်ငံအတွက် ကမ္ဘာ့အဆင့်မီ မွေးမြူရေးလိုင်းများ',
+                psTitle: 'မိခင်မျိုးဝက် (PS)',
+                psDesc: 'ကျွန်ုပ်တို့၏ မိခင်မျိုးဝက် အစီအစဉ်သည် GP အုပ်စုမှ ထူးချွန်သော မျိုးရိုးဗီဇကို မြန်မာနိုင်ငံတစ်ဝှမ်းရှိ ခြံများအတွက် စွမ်းဆောင်ရည်မြင့် မွေးမြူရေးတိရစ္ဆာန်များ ထုတ်လုပ်ရန် တိုးမြှင့်ပေးပါသည်။',
+                psFeat1: 'မွေးဖွားနှုန်းမြင့် (၁၂-၁၄ ကောင်)',
+                psFeat2: 'ကောင်းမွန်သော မိခင်စောင့်ရှောက်မှု',
+                psFeat3: 'နို့ထွက်နှုန်း ကောင်းမွန်',
+                psFeat4: 'ပတ်ဝန်းကျင်အမျိုးမျိုးတွင် တသမတ်တည်း စွမ်းဆောင်ရည်',
+                psVisualTitle: 'မျိုးပွားရေး အစီအစဉ်',
+                psVisualDesc: 'နိုင်ငံ့ အုပ်စု မျိုးရိုးဗီဇ မြှင့်တင်ခြင်း',
+                commBadge: '~၃၈,၀၀၀ ကောင်/နှစ်',
+                commTitle: 'ကုန်သွယ်ရေး ဝက်များ',
+                commDesc: 'ကျွန်ုပ်တို့၏ ကုန်သွယ်ရေးဝက်များသည် ဈေးကွက်စွမ်းဆောင်ရည် အကောင်းဆုံးဖြစ်စေရန် hybrid vigor ကို အမြင့်ဆုံးဖြစ်အောင် ဂရုတစိုက် စီစဉ်ထားသော crossbreeding အစီအစဉ်များ၏ ရလဒ်ဖြစ်ပါသည်။',
+                commFeat1: 'မြန်ဆန်သော ကြီးထွားမှု (၁၅၀-၁၇၀ ရက်)',
+                commFeat2: 'ကောင်းမွန်သော အစာပြောင်းလဲနှုန်း (2.5-2.8 FCR)',
+                commFeat3: 'အဆီနည်း အရည်အသွေးမြင့် အသား',
+                commFeat4: 'မွေးဖွားမှုမှ ဈေးကွက်အထိ ခြေရာခံနိုင်',
+                energyTitle: '🌱 စိမ်းလန်းစွမ်းအင် သက်ရောက်မှု',
+                energyLabel1: 'kWh/ရက် ဆိုလာ + ဇီဝဓာတ်ငွေ့',
+                energyLabel2: 'တန် CO₂ လျှော့ချ/နှစ်',
+                energyLabel3: 'သစ်ပင် ညီမျှ ကယ်တင်',
+                sustainTitle: 'ရေရှည်တည်တံ့မှု',
+                solarTitle: 'ဆိုလာစွမ်းအင် စနစ်',
+                solarDesc: 'ကျွန်ုပ်တို့၏ ခြံသည် နေ့စဉ်လုပ်ငန်းဆောင်ရွက်မှုများအတွက် သန့်ရှင်းသော လျှပ်စစ်ဓာတ်အားကို ထုတ်လုပ်ပေးသည့် ဆိုလာပြားများ တပ်ဆင်ထားပြီး ကာဗွန်ခြေရာကို လျှော့ချပေးပါသည်။',
+                biogasTitle: 'ဇီဝဓာတ်ငွေ့ ထုတ်လုပ်ခြင်း',
+                biogasDesc: 'ကျွန်ုပ်တို့သည် ဝက်စွန့်ပစ်ပစ္စည်းများကို anaerobic digestion ဖြင့် တန်ဖိုးရှိ ဇီဝဓာတ်ငွေ့အဖြစ် ပြောင်းလဲပြီး ခြံတွင် circular economy ဖန်တီးပါသည်။',
+                biogasVisualTitle: 'ဇီဝဓာတ်ငွေ့ ထုတ်လုပ်ခြင်း',
+                biogasVisualDesc: 'စွန့်ပစ်ပစ္စည်းကို သန့်ရှင်းစွမ်းအင်အဖြစ် ပြောင်းလဲခြင်း',
+                biogasStat1: 'ဓာတ်အား ပံ့ပိုးမှု',
+                biogasStat2: 'အမှိုက်ပုံသို့ စွန့်ပစ်မှု',
+                bioTitle: 'ဇီဝလုံခြုံရေး ထူးချွန်မှု',
+                bioDesc: 'ဇီဝလုံခြုံရေးသည် ကျွန်ုပ်တို့၏ လုပ်ငန်းဆောင်ရွက်မှု၏ အခြေခံအုတ်မြစ်ဖြစ်ပါသည်။ ထိန်းချုပ်ထားသော ဝင်ရောက်ဧရိယာများ၊ ယာဉ်ပိုးသတ်ဆေးဖျန်းစခန်းများ၊ ရေချိုးဝင်/ရေချိုးထွက် ပရိုတိုကောများ ပါဝင်ပါသည်။',
+                knowledgeTitle: 'ဗဟုသုတ ဗဟိုချက်',
+                knowledgeSubtitle: 'ဝက်မွေးမြူရေး ဗဟုသုတနှင့် အကောင်းဆုံး အလေ့အကျင့်များ',
+                article1Badge: 'အာဟာရ',
+                article1Title: 'ဝက်ကြီးထွားမှုအတွက် အကောင်းဆုံး အာဟာရ',
+                article1Desc: 'ကြီးထွားမှုအဆင့်အမျိုးမျိုးတွင် အာဟာရလိုအပ်ချက်များကို နားလည်ခြင်းသည် အစာပြောင်းလဲနိုင်စွမ်းကို အမြင့်ဆုံးဖြစ်စေရန်နှင့် အကောင်းဆုံး ဈေးကွက်အလေးချိန်ရရှိရန် အရေးကြီးပါသည်။',
+                article2Badge: 'မွေးမြူရေး',
+                article2Title: 'ခေတ်မီ မွေးမြူရေး နည်းပညာများ',
+                article2Desc: 'genomic selection၊ crossbreeding အစီအစဉ်များနှင့် မျိုးပွားရေး စီမံခန့်ခွဲမှု နည်းပညာများ အပါအဝင် အဆင့်မြင့် မွေးမြူရေး မဟာဗျူဟာများကို လေ့လာပါ။',
+                article3Badge: 'ကျန်းမာရေး',
+                article3Title: 'ရောဂါကာကွယ်ရေးနှင့် ဇီဝလုံခြုံရေး',
+                article3Desc: 'ကာကွယ်ဆေးထိုးအစီအစဉ်များ၊ ဇီဝလုံခြုံရေး ပရိုတိုကောများနှင့် စောစီးစွာ ထောက်လှမ်းရေးစနစ်များဖြင့် အဖြစ်များသော ဝက်ရောဂါများကို ကာကွယ်ခြင်း လမ်းညွှန်။',
+                article4Badge: 'စီမံခန့်ခွဲမှု',
+                article4Title: 'ခြံစီမံခန့်ခွဲမှု အကောင်းဆုံး အလေ့အကျင့်များ',
+                article4Desc: 'အိမ်ရာဒီဇိုင်း၊ လေဝင်လေထွက်စနစ်များ၊ စွန့်ပစ်ပစ္စည်း စီမံခန့်ခွဲမှုနှင့် မှတ်တမ်းထိန်းသိမ်းခြင်း အကျုံးဝင်သော ထိရောက်သော ခြံစီမံခန့်ခွဲမှု မဟာဗျူဟာများ။',
+                contactTitle: 'ဆက်သွယ်ရန်',
+                contactAddress: 'လိပ်စာ',
+                contactAddressVal: 'စက်မှုဇုန်၊ ရန်ကုန်တိုင်းဒေသကြီး၊ မြန်မာ',
+                contactPhone: 'ဖုန်း',
+                contactPhoneVal: '+95 9 123 456 789',
+                contactEmail: 'အီးမေးလ်',
+                contactEmailVal: 'info@myanmarswine.com',
+                contactFormTitle: 'မက်ဆေ့ချ် ပို့ရန်',
+                contactName: 'သင့်နာမည်',
+                contactNamePh: 'နာမည်ထည့်ပါ',
+                contactEmailLabel: 'သင့်အီးမေးလ်',
+                contactEmailPh: 'အီးမေးလ်ထည့်ပါ',
+                contactMsg: 'မက်ဆေ့ချ်',
+                contactMsgPh: 'မက်ဆေ့ချ်ထည့်ပါ',
+                contactBtn: '✉️ မက်ဆေ့ချ် ပို့ရန်',
+                footerTagline: 'မြန်မာနိုင်ငံ၏ ပထမဆုံး GP မွေးမြူသူ',
+                footerQuickLinks: 'အမြန်လင့်များ',
+                footerContact: 'ဆက်သွယ်ရန်',
+                footerCopyright: '© 2024 Myanmar Swine Livestock Co., Ltd. မူပိုင်ခွင့်အားလုံး ရယူထားသည်။',
+                formSuccess: 'သင့်မက်ဆေ့ချ်အတွက် ကျေးဇူးတင်ပါသည်! မကြာမီ ပြန်လည်ဆက်သွယ်ပါမည်။'
+            },
+            zh: {
+                navHome: '首页',
+                navProducts: '产品',
+                navSustainability: '可持续发展',
+                navKnowledge: '知识',
+                navContact: '联系我们',
+                heroTitle: '缅甸首家GP种猪繁殖商',
+                heroDesc: '通过世界一流的育种计划，引领可持续猪遗传学发展，为缅甸不断增长的人口提供优质蛋白质。',
+                heroBtn1: '我们的产品 →',
+                heroBtn2: '可持续发展',
+                stat1Num: '38,000+',
+                stat1Label: '年产量（头/年）',
+                stat2Num: '缅甸首家',
+                stat2Label: 'GP种猪繁殖商',
+                stat3Num: '近零电网',
+                stat3Label: '电力依赖',
+                missionTitle: '我们的使命',
+                missionDesc: 'Myanmar Swine Livestock Co., Ltd. 致力于通过世界一流的遗传学、可持续的养殖实践和尖端的生物安全措施来推进缅甸的养猪业。我们相信在为后代保护环境的同时提供安全、优质的蛋白质。',
+                feat1Title: '食品安全保障',
+                feat1Desc: '为人民提供蛋白质',
+                feat2Title: '可持续发展',
+                feat2Desc: '近零电网',
+                feat3Title: '缅甸首家',
+                feat3Desc: 'GP种猪繁殖商',
+                pricesTitle: '📈 当前价格',
+                pricesSubtitle: '定期更新',
+                priceCommercial: '商品猪',
+                pricePS: '父母代种猪',
+                priceGP: '祖代种猪',
+                pricePerKg: '每公斤价格',
+                pricePerHead: '每头价格',
+                priceNote1: '可上市，90-110公斤活重',
+                priceNote2: '可繁殖的后备母猪和公猪',
+                priceNote3: '精英遗传，数量有限',
+                productsTitle: '我们的产品',
+                gpBadge: '缅甸首家',
+                gpTitle: '祖代种猪 (GP)',
+                gpDesc: '作为缅甸首家也是唯一的GP繁殖商，我们维护着从世界知名育种公司进口的最高遗传品系。',
+                gpFeat1: '卓越的生长速度和饲料效率',
+                gpFeat2: '优秀的繁殖性能',
+                gpFeat3: '抗病性和健壮性',
+                gpFeat4: '最佳胴体品质',
+                gpVisualTitle: '精英遗传',
+                gpVisualDesc: '为缅甸提供世界一流的育种品系',
+                psTitle: '父母代种猪 (PS)',
+                psDesc: '我们的父母代种猪计划将GP群体的优良遗传扩大到为缅甸各地的农场生产高性能繁殖动物。',
+                psFeat1: '高产仔数（活产12-14头）',
+                psFeat2: '优秀的母性能力',
+                psFeat3: '强大的泌乳能力',
+                psFeat4: '在各种环境中表现一致',
+                psVisualTitle: '扩繁计划',
+                psVisualDesc: '提升国家猪群遗传水平',
+                commBadge: '~38,000头/年',
+                commTitle: '商品猪',
+                commDesc: '我们的商品猪是精心策划的杂交育种计划的成果，最大化杂种优势以获得最佳市场表现。',
+                commFeat1: '快速生长（150-170天达到上市体重）',
+                commFeat2: '优秀的饲料转化率（2.5-2.8 FCR）',
+                commFeat3: '瘦肉型、高品质胴体',
+                commFeat4: '从出生到市场的全程可追溯',
+                energyTitle: '🌱 绿色能源影响',
+                energyLabel1: 'kWh/天 太阳能+沼气',
+                energyLabel2: '吨 CO₂ 年减排量',
+                energyLabel3: '等效树木节约',
+                sustainTitle: '可持续发展',
+                solarTitle: '太阳能系统',
+                solarDesc: '我们的农场运营着全面的太阳能板安装，为日常运营产生清洁电力，减少碳足迹，证明现代畜牧业可以对环境负责。',
+                biogasTitle: '沼气发电',
+                biogasDesc: '我们通过厌氧消化将猪粪转化为有价值的沼气，在农场创建循环经济。这个过程消除了废物，同时产生可再生能源。',
+                biogasVisualTitle: '沼气发电',
+                biogasVisualDesc: '将废物转化为清洁能源',
+                biogasStat1: '电力供应',
+                biogasStat2: '填埋废物',
+                bioTitle: '生物安全卓越',
+                bioDesc: '生物安全是我们运营的基石。我们实施多层保护，包括受控进入区域、车辆消毒站、淋浴进出协议和全面的健康监测，以保持猪群无疾病。',
+                knowledgeTitle: '知识中心',
+                knowledgeSubtitle: '养猪知识和最佳实践',
+                article1Badge: '营养',
+                article1Title: '猪生长的最佳营养',
+                article1Desc: '了解不同生长阶段的营养需求对于最大化饲料效率和达到最佳上市体重至关重要。了解蛋白质需求、能量来源和矿物质补充。',
+                article2Badge: '育种',
+                article2Title: '现代育种技术',
+                article2Desc: '探索包括基因组选择、杂交育种计划和繁殖管理技术在内的先进育种策略，最大化遗传进步和猪群生产力。',
+                article3Badge: '健康',
+                article3Title: '疾病预防与生物安全',
+                article3Desc: '通过疫苗接种计划、生物安全协议和早期检测系统预防常见猪病的综合指南，保护您的投资。',
+                article4Badge: '管理',
+                article4Title: '农场管理最佳实践',
+                article4Desc: '涵盖住房设计、通风系统、废物管理和记录保存的有效农场管理策略，实现盈利和可持续的养猪运营。',
+                contactTitle: '联系我们',
+                contactAddress: '地址',
+                contactAddressVal: '工业区，仰光省，缅甸',
+                contactPhone: '电话',
+                contactPhoneVal: '+95 9 123 456 789',
+                contactEmail: '邮箱',
+                contactEmailVal: 'info@myanmarswine.com',
+                contactFormTitle: '发送消息',
+                contactName: '您的姓名',
+                contactNamePh: '输入您的姓名',
+                contactEmailLabel: '您的邮箱',
+                contactEmailPh: '输入您的邮箱',
+                contactMsg: '消息',
+                contactMsgPh: '输入您的消息',
+                contactBtn: '✉️ 发送消息',
+                footerTagline: '缅甸首家GP种猪繁殖商',
+                footerQuickLinks: '快速链接',
+                footerContact: '联系方式',
+                footerCopyright: '© 2024 Myanmar Swine Livestock Co., Ltd. 版权所有。',
+                formSuccess: '感谢您的留言！我们将尽快回复您。'
+            }
+        };
+
+        let currentLang = 'en';
+
+        // Language switcher
+        function switchLang(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick="switchLang('${lang}')"]`).classList.add('active');
+            applyTranslations(lang);
+        }
+
+        function applyTranslations(lang) {
+            const t = translations[lang];
+            if (!t) return;
+
+            // Navigation
+            const navLinks = document.querySelectorAll('nav a');
+            if (navLinks.length >= 5) {
+                navLinks[0].textContent = t.navHome;
+                navLinks[1].textContent = t.navProducts;
+                navLinks[2].textContent = t.navSustainability;
+                navLinks[3].textContent = t.navKnowledge;
+                navLinks[4].textContent = t.navContact;
+            }
+
+            // Hero
+            document.querySelector('.hero-text h1').textContent = t.heroTitle;
+            document.querySelector('.hero-text p').textContent = t.heroDesc;
+            const heroBtns = document.querySelectorAll('.hero-text .btn');
+            if (heroBtns.length >= 2) {
+                heroBtns[0].textContent = t.heroBtn1;
+                heroBtns[1].textContent = t.heroBtn2;
+            }
+
+            // Stats
+            const stats = document.querySelectorAll('.stats-grid > div');
+            if (stats.length >= 3) {
+                stats[0].querySelector('.stat-number').textContent = t.stat1Num;
+                stats[0].querySelector('.stat-label').textContent = t.stat1Label;
+                stats[1].querySelector('.stat-number').textContent = t.stat2Num;
+                stats[1].querySelector('.stat-label').textContent = t.stat2Label;
+                stats[2].querySelector('.stat-number').textContent = t.stat3Num;
+                stats[2].querySelector('.stat-label').textContent = t.stat3Label;
+            }
+
+            // Mission
+            document.querySelector('#about h2').textContent = t.missionTitle;
+            document.querySelector('#about p').textContent = t.missionDesc;
+            const feats = document.querySelectorAll('.feature-item');
+            if (feats.length >= 3) {
+                feats[0].querySelector('.feature-title').textContent = t.feat1Title;
+                feats[0].querySelector('.feature-desc').textContent = t.feat1Desc;
+                feats[1].querySelector('.feature-title').textContent = t.feat2Title;
+                feats[1].querySelector('.feature-desc').textContent = t.feat2Desc;
+                feats[2].querySelector('.feature-title').textContent = t.feat3Title;
+                feats[2].querySelector('.feature-desc').textContent = t.feat3Desc;
+            }
+
+            // Prices
+            document.querySelector('#prices h2').textContent = t.pricesTitle;
+            document.querySelector('#prices p').textContent = t.pricesSubtitle;
+            const priceCards = document.querySelectorAll('.price-card');
+            if (priceCards.length >= 3) {
+                priceCards[0].querySelector('h3').textContent = t.priceCommercial;
+                priceCards[1].querySelector('h3').textContent = t.pricePS;
+                priceCards[2].querySelector('h3').textContent = t.priceGP;
+                priceCards.forEach(card => {
+                    const labels = card.querySelectorAll('.price-label');
+                    if (labels.length >= 2) {
+                        labels[0].textContent = t.pricePerKg;
+                        labels[1].textContent = t.pricePerHead;
+                    }
+                });
+                priceCards[0].querySelector('.price-note').textContent = t.priceNote1;
+                priceCards[1].querySelector('.price-note').textContent = t.priceNote2;
+                priceCards[2].querySelector('.price-note').textContent = t.priceNote3;
+            }
+
+            // Products section title
+            document.querySelector('#products .section-title').textContent = t.productsTitle;
+
+            // GP Product
+            const productBlocks = document.querySelectorAll('.product-block');
+            if (productBlocks.length >= 3) {
+                // GP
+                productBlocks[0].querySelector('.product-badge').textContent = t.gpBadge;
+                productBlocks[0].querySelector('h3').textContent = t.gpTitle;
+                productBlocks[0].querySelector('p').textContent = t.gpDesc;
+                const gpFeats = productBlocks[0].querySelectorAll('.product-features li');
+                if (gpFeats.length >= 4) {
+                    gpFeats[0].lastChild.textContent = t.gpFeat1;
+                    gpFeats[1].lastChild.textContent = t.gpFeat2;
+                    gpFeats[2].lastChild.textContent = t.gpFeat3;
+                    gpFeats[3].lastChild.textContent = t.gpFeat4;
+                }
+                productBlocks[0].querySelector('.product-visual h3').textContent = t.gpVisualTitle;
+                productBlocks[0].querySelector('.product-visual p').textContent = t.gpVisualDesc;
+
+                // PS
+                productBlocks[1].querySelector('h3:not(.product-visual h3)').textContent = t.psTitle;
+                const psDescEl = productBlocks[1].querySelectorAll('p');
+                for (let p of psDescEl) {
+                    if (p.closest('.product-visual')) continue;
+                    if (p.textContent.includes('Parent Stock') || p.textContent.includes('မိခင်') || p.textContent.includes('父母代') || p.textContent.length > 50) {
+                        p.textContent = t.psDesc;
+                        break;
+                    }
+                }
+                const psFeats = productBlocks[1].querySelectorAll('.product-features li');
+                if (psFeats.length >= 4) {
+                    psFeats[0].lastChild.textContent = t.psFeat1;
+                    psFeats[1].lastChild.textContent = t.psFeat2;
+                    psFeats[2].lastChild.textContent = t.psFeat3;
+                    psFeats[3].lastChild.textContent = t.psFeat4;
+                }
+                productBlocks[1].querySelector('.product-visual h3').textContent = t.psVisualTitle;
+                productBlocks[1].querySelector('.product-visual p').textContent = t.psVisualDesc;
+
+                // Commercial
+                productBlocks[2].querySelector('.product-badge').textContent = t.commBadge;
+                const commH3s = productBlocks[2].querySelectorAll('h3');
+                for (let h of commH3s) {
+                    if (!h.closest('.product-visual')) { h.textContent = t.commTitle; break; }
+                }
+                const commDescEl = productBlocks[2].querySelectorAll('p');
+                for (let p of commDescEl) {
+                    if (p.closest('.product-visual')) continue;
+                    if (p.textContent.length > 50) { p.textContent = t.commDesc; break; }
+                }
+                const commFeats = productBlocks[2].querySelectorAll('.product-features li');
+                if (commFeats.length >= 4) {
+                    commFeats[0].lastChild.textContent = t.commFeat1;
+                    commFeats[1].lastChild.textContent = t.commFeat2;
+                    commFeats[2].lastChild.textContent = t.commFeat3;
+                    commFeats[3].lastChild.textContent = t.commFeat4;
+                }
+            }
+
+            // Green Energy
+            document.querySelector('.energy-section .section-title').textContent = t.energyTitle;
+            const energyLabels = document.querySelectorAll('.energy-label');
+            if (energyLabels.length >= 3) {
+                energyLabels[0].textContent = t.energyLabel1;
+                energyLabels[1].textContent = t.energyLabel2;
+                energyLabels[2].textContent = t.energyLabel3;
+            }
+
+            // Sustainability
+            const sustainSections = document.querySelectorAll('.sustain-block');
+            if (sustainSections.length >= 3) {
+                sustainSections[0].querySelector('h3').textContent = t.solarTitle;
+                sustainSections[0].querySelector('p').textContent = t.solarDesc;
+                // Biogas visual
+                const biogasVisual = sustainSections[1].querySelector('h3');
+                if (biogasVisual) biogasVisual.textContent = t.biogasVisualTitle;
+                const biogasLabels = sustainSections[1].querySelectorAll('.label');
+                if (biogasLabels.length >= 2) {
+                    biogasLabels[0].textContent = t.biogasStat1;
+                    biogasLabels[1].textContent = t.biogasStat2;
+                }
+                sustainSections[2].querySelector('h3').textContent = t.bioTitle;
+                sustainSections[2].querySelector('p').textContent = t.bioDesc;
+            }
+
+            // Knowledge
+            document.querySelector('#knowledge .section-title').textContent = t.knowledgeTitle;
+            document.querySelector('#knowledge p').textContent = t.knowledgeSubtitle;
+            const articles = document.querySelectorAll('.article-card');
+            if (articles.length >= 4) {
+                articles[0].querySelector('.article-badge').textContent = t.article1Badge;
+                articles[0].querySelector('h3').textContent = t.article1Title;
+                articles[0].querySelector('p').textContent = t.article1Desc;
+                articles[1].querySelector('.article-badge').textContent = t.article2Badge;
+                articles[1].querySelector('h3').textContent = t.article2Title;
+                articles[1].querySelector('p').textContent = t.article2Desc;
+                articles[2].querySelector('.article-badge').textContent = t.article3Badge;
+                articles[2].querySelector('h3').textContent = t.article3Title;
+                articles[2].querySelector('p').textContent = t.article3Desc;
+                articles[3].querySelector('.article-badge').textContent = t.article4Badge;
+                articles[3].querySelector('h3').textContent = t.article4Title;
+                articles[3].querySelector('p').textContent = t.article4Desc;
+            }
+
+            // Contact
+            document.querySelector('#contact .section-title').textContent = t.contactTitle;
+            const contactItems = document.querySelectorAll('.contact-item');
+            if (contactItems.length >= 3) {
+                contactItems[0].querySelector('.contact-label').textContent = t.contactAddress;
+                contactItems[0].querySelector('.contact-value').textContent = t.contactAddressVal;
+                contactItems[1].querySelector('.contact-label').textContent = t.contactPhone;
+                contactItems[1].querySelector('.contact-value').textContent = t.contactPhoneVal;
+                contactItems[2].querySelector('.contact-label').textContent = t.contactEmail;
+                contactItems[2].querySelector('.contact-value').textContent = t.contactEmailVal;
+            }
+
+            // Contact form
+            document.querySelector('.contact-form h3').textContent = t.contactFormTitle;
+            const formLabels = document.querySelectorAll('.form-group label');
+            const formInputs = document.querySelectorAll('.form-group input, .form-group textarea');
+            if (formLabels.length >= 3) {
+                formLabels[0].textContent = t.contactName;
+                formLabels[1].textContent = t.contactEmailLabel;
+                formLabels[2].textContent = t.contactMsg;
+            }
+            if (formInputs.length >= 3) {
+                formInputs[0].placeholder = t.contactNamePh;
+                formInputs[1].placeholder = t.contactEmailPh;
+                formInputs[2].placeholder = t.contactMsgPh;
+            }
+            document.querySelector('.btn-submit').textContent = t.contactBtn;
+
+            // Footer
+            const footerSections = document.querySelectorAll('.footer-grid > div');
+            if (footerSections.length >= 3) {
+                footerSections[0].querySelector('p').textContent = t.footerTagline;
+                footerSections[1].querySelector('h3').textContent = t.footerQuickLinks;
+                // Update footer nav links
+                const footerLinks = footerSections[1].querySelectorAll('a');
+                if (footerLinks.length >= 5) {
+                    footerLinks[0].textContent = t.navHome;
+                    footerLinks[1].textContent = t.navProducts;
+                    footerLinks[2].textContent = t.navSustainability;
+                    footerLinks[3].textContent = t.navKnowledge;
+                    footerLinks[4].textContent = t.navContact;
+                }
+                footerSections[2].querySelector('h3').textContent = t.footerContact;
+            }
+            document.querySelector('.footer-bottom p').textContent = t.footerCopyright;
+        }
+
+        // Contact form
+        function handleSubmit(e) {
+            e.preventDefault();
+            const t = translations[currentLang];
+            alert(t.formSuccess);
+            e.target.reset();
+        }
+
+        // Mobile menu toggle
+        function toggleMobile() {
+            const nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+            nav.style.position = 'absolute';
+            nav.style.top = '64px';
+            nav.style.left = '0';
+            nav.style.right = '0';
+            nav.style.background = '#fff';
+            nav.style.flexDirection = 'column';
+            nav.style.padding = '1rem';
+            nav.style.boxShadow = '0 4px 10px rgba(0,0,0,0.1)';
+        }
+    </script>
+</body>
+</html>
